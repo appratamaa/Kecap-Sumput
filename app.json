@@ -1,33 +1,38 @@
 {
   "expo": {
-    "name": "kecap-sumput",
+    "name": "Kecap Sumput",
     "slug": "kecap-sumput",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.kecapsumput"
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
       "package": "com.anonymous.kecapsumput",
-      "jsEngine": "jsc" 
+      "jsEngine": "jsc",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/logo.jpg"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logo.jpg"
     },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Izinkan Kecap Sumput mengakses kamera untuk mengambil foto profil Marlin."
+        }
+      ],
+      "expo-av"
+    ],
     "extra": {
       "eas": {
         "projectId": "f2bf5fd0-ba09-4e34-839c-d84e355a4fbf"
