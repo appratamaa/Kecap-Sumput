@@ -1,0 +1,426 @@
+{
+  "pangandaran": [
+    {
+      "warga": "Pantai Barat",
+      "descWarga": "Spot utama melihat sunset, ombaknya bersahabat untuk berenang dan surfing.",
+      "penyusup": "Pantai Timur",
+      "descPenyusup": "Surganya kuliner seafood dan tempat terbaik berburu sunrise di pagi buta."
+    },
+    {
+      "warga": "Citumang",
+      "descWarga": "Sungai bening dengan aktivitas Body Rafting menembus gua dan pepohonan rimbun.",
+      "penyusup": "Green Canyon",
+      "descPenyusup": "Dikenal sebagai Cukang Taneuh, wisata perahu menyusuri tebing eksotis bak kanyon Amerika."
+    },
+    {
+      "warga": "Madasari",
+      "descWarga": "Pantai eksotis dengan pulau-pulau karang kecil, sangat cocok untuk kemping.",
+      "penyusup": "Batu Karas",
+      "descPenyusup": "Pantai dengan ombak panjang yang menjadi favorit para peselancar lokal maupun dunia."
+    },
+    {
+      "warga": "Batu Hiu",
+      "descWarga": "Bukit karang dengan pemandangan laut lepas, konon ada batu berbentuk sirip hiu.",
+      "penyusup": "Karang Nini",
+      "descPenyusup": "Kawasan perhutani dengan legenda cinta sejati nenek (nini) yang menunggu kakeknya."
+    },
+    {
+      "warga": "Pindang Gunung",
+      "descWarga": "Sup ikan khas Pangandaran berkuah kuning segar dengan paduan kecombrang (honje).",
+      "penyusup": "Jambal Roti",
+      "descPenyusup": "Ikan asin primadona oleh-oleh Pangandaran, dagingnya tebal dan empuk seperti roti saat digoreng."
+    },
+    {
+      "warga": "Cagar Alam",
+      "descWarga": "Hutan konservasi di semenanjung Pangandaran yang dipenuhi monyet, rusa, dan gua bersejarah.",
+      "penyusup": "Pasir Putih",
+      "descPenyusup": "Area pantai bersih tanpa karang, tempat bersandar bangkai kapal menteri Susi."
+    },
+    {
+      "warga": "Sate Galunggung",
+      "descWarga": "Warung sate legendaris di Pangandaran yang sudah berdiri puluhan tahun.",
+      "penyusup": "Sate Madura",
+      "descPenyusup": "Sate ayam dengan bumbu kacang kental yang umum ditemui di berbagai daerah."
+    },
+    {
+      "warga": "Gua Jepang",
+      "descWarga": "Gua pertahanan yang digali paksa pada masa penjajahan Dai Nippon.",
+      "penyusup": "Gua Lanang",
+      "descPenyusup": "Gua dengan stalaktit indah dan konon dulunya adalah keraton keraton Prabu Anggalarang."
+    },
+    {
+      "warga": "Jus Honje",
+      "descWarga": "Minuman segar dari bunga kecombrang yang berkhasiat menurunkan kolesterol.",
+      "penyusup": "Es Kelapa Muda",
+      "descPenyusup": "Minuman wajib pesisir pantai yang langsung diseruput dari batoknya."
+    },
+    {
+      "warga": "Peuyeum",
+      "descWarga": "Singkong fermentasi khas Sunda dengan rasa manis legit dan sedikit asam.",
+      "penyusup": "Tape",
+      "descPenyusup": "Sajian fermentasi serupa peuyeum, namun biasanya lebih lembek dan berair."
+    },
+    {
+      "warga": "Aquarium Piamari",
+      "descWarga": "Aquarium raksasa indoor di Pangandaran yang menampilkan biota laut Indonesia.",
+      "penyusup": "Museum Nyamuk",
+      "descPenyusup": "Wisata edukasi di Pangandaran untuk mengenal berbagai jenis nyamuk dan risetnya."
+    },
+    {
+      "warga": "Susi Air",
+      "descWarga": "Maskapai penerbangan perintis milik Susi Pudjiastuti, tokoh asli Pangandaran.",
+      "penyusup": "Bandara Nusawiru",
+      "descPenyusup": "Bandar udara yang berlokasi di Cijulang, melayani rute perintis ke Pangandaran."
+    },
+    {
+      "warga": "Nyi Roro Kidul",
+      "descWarga": "Mitos penguasa laut selatan yang erat kaitannya dengan pantangan memakai baju hijau.",
+      "penyusup": "Baju Hijau",
+      "descPenyusup": "Warna pakaian yang menjadi mitos larangan saat berkunjung ke pantai selatan."
+    },
+    {
+      "warga": "Banteng",
+      "descWarga": "Hewan liar dilindungi yang sesekali bisa terlihat di kawasan Cagar Alam Pananjung.",
+      "penyusup": "Rusa",
+      "descPenyusup": "Mamalia jinak yang berkeliaran bebas menyapa wisatawan di sekitar Cagar Alam."
+    },
+    {
+      "warga": "Bunga Raflesia",
+      "descWarga": "Bunga langka padma yang sesekali mekar di dalam Cagar Alam Pangandaran.",
+      "penyusup": "Bunga Bangkai",
+      "descPenyusup": "Bunga berbau busuk (Amorphophallus) yang bentuknya menjulang tinggi ke atas."
+    },
+    {
+      "warga": "Odong-odong",
+      "descWarga": "Kendaraan hias dengan musik keras, favorit wisatawan untuk keliling Pangandaran malam hari.",
+      "penyusup": "Sepeda Tandem",
+      "descPenyusup": "Sepeda panjang berboncengan yang banyak disewakan di pinggir Pantai Barat."
+    },
+    {
+      "warga": "Surfing",
+      "descWarga": "Olahraga berselancar menunggangi ombak, sangat populer di Pantai Batu Karas.",
+      "penyusup": "Body Rafting",
+      "descPenyusup": "Menyusuri arus sungai menggunakan pelampung badan, populer di Citumang & Green Canyon."
+    },
+    {
+      "warga": "Alun-alun Paamprokan",
+      "descWarga": "Ruang publik megah di Pamugaran dengan menara pandang untuk rekreasi warga.",
+      "penyusup": "Kampung Turis",
+      "descPenyusup": "Deretan resto dan cafe estetik pinggir pantai bergaya bambu layaknya Jimbaran Bali."
+    },
+    {
+      "warga": "Tugu Ikan Marlin",
+      "descWarga": "Ikon patung ikan Blue Marlin yang sedang melompat, lambang Kabupaten Pangandaran.",
+      "penyusup": "Bupati Pangandaran",
+      "descPenyusup": "Kepala daerah yang memimpin jalannya pemerintahan di Kabupaten Pangandaran."
+    },
+    {
+      "warga": "Pasar Pananjung",
+      "descWarga": "Pasar tradisional utama tempat warga lokal dan turis mencari kebutuhan pokok harian.",
+      "penyusup": "Pelelangan Ikan (TPI)",
+      "descPenyusup": "Tempat nelayan membongkar dan melelang tangkapan hasil laut segar di Pantai Timur."
+    }
+  ],
+  "ekstra": [
+    {
+      "warga": "Kopi Hitam",
+      "descWarga": "Minuman berkafein pekat yang diseduh tanpa gula atau susu.",
+      "penyusup": "Teh Manis",
+      "descPenyusup": "Minuman seduhan daun teh yang ditambahkan gula agar terasa manis."
+    },
+    {
+      "warga": "Gitar",
+      "descWarga": "Alat musik berdawai yang dipetik atau digenjreng.",
+      "penyusup": "Biola",
+      "descPenyusup": "Alat musik berdawai yang dimainkan dengan cara digesek."
+    },
+    {
+      "warga": "Kucing",
+      "descWarga": "Hewan peliharaan berbulu yang suka mengeong dan menangkap tikus.",
+      "penyusup": "Anjing",
+      "descPenyusup": "Hewan peliharaan yang setia, menggonggong, dan suka menjaga rumah."
+    },
+    {
+      "warga": "Sepeda Motor",
+      "descWarga": "Kendaraan beroda dua yang digerakkan oleh mesin.",
+      "penyusup": "Sepeda Onthel",
+      "descPenyusup": "Kendaraan beroda dua klasik yang digerakkan dengan cara dikayuh."
+    },
+    {
+      "warga": "Nasi Goreng",
+      "descWarga": "Nasi yang digoreng dengan bumbu kecap, bawang, dan aneka isian.",
+      "penyusup": "Mie Goreng",
+      "descPenyusup": "Mie yang dimasak kering dengan bumbu gurih manis."
+    },
+    {
+      "warga": "Buku Tulis",
+      "descWarga": "Kumpulan kertas kosong yang dijilid untuk mencatat sesuatu.",
+      "penyusup": "Kamus",
+      "descPenyusup": "Buku referensi yang berisi daftar kata beserta arti dan pelafalannya."
+    },
+    {
+      "warga": "Pesawat Terbang",
+      "descWarga": "Kendaraan udara yang memiliki sayap dan mesin pendorong untuk terbang.",
+      "penyusup": "Helikopter",
+      "descPenyusup": "Kendaraan udara dengan baling-baling besar di bagian atasnya."
+    },
+    {
+      "warga": "Sepatu Kets",
+      "descWarga": "Alas kaki kasual bersol karet yang nyaman dipakai sehari-hari.",
+      "penyusup": "Sandal Jepit",
+      "descPenyusup": "Alas kaki santai dengan tali penahan berbentuk huruf Y."
+    },
+    {
+      "warga": "Kipas Angin",
+      "descWarga": "Alat elektronik berbaling-baling untuk menghasilkan angin.",
+      "penyusup": "Air Conditioner",
+      "descPenyusup": "Mesin pendingin ruangan yang mengatur suhu dan kelembapan."
+    },
+    {
+      "warga": "Jam Tangan",
+      "descWarga": "Alat penunjuk waktu yang dipakai melingkar di pergelangan tangan.",
+      "penyusup": "Jam Dinding",
+      "descPenyusup": "Alat penunjuk waktu berukuran besar yang dipasang di tembok."
+    },
+    {
+      "warga": "Kacamata",
+      "descWarga": "Alat bantu penglihatan yang terdiri dari lensa dan bingkai.",
+      "penyusup": "Lensa Kontak",
+      "descPenyusup": "Lensa tipis yang dipasang langsung menempel pada kornea mata."
+    },
+    {
+      "warga": "Pisau Dapur",
+      "descWarga": "Alat tajam bergagang yang digunakan untuk memotong bahan makanan.",
+      "penyusup": "Gunting",
+      "descPenyusup": "Alat pemotong dengan dua bilah pisau yang berporos di tengah."
+    },
+    {
+      "warga": "Topi",
+      "descWarga": "Pelindung kepala dari panas matahari yang memiliki lidah di bagian depan.",
+      "penyusup": "Helm",
+      "descPenyusup": "Pelindung kepala keras yang wajib dipakai saat mengendarai motor."
+    },
+    {
+      "warga": "Sabun Mandi",
+      "descWarga": "Pembersih tubuh berbentuk padat atau cair yang menghasilkan busa.",
+      "penyusup": "Sampo",
+      "descPenyusup": "Cairan khusus untuk mencuci dan membersihkan rambut serta kulit kepala."
+    },
+    {
+      "warga": "Sikat Gigi",
+      "descWarga": "Alat berbulu kecil untuk membersihkan sela-sela gigi.",
+      "penyusup": "Pasta Gigi",
+      "descPenyusup": "Krim atau gel pembersih yang dioleskan pada sikat gigi."
+    },
+    {
+      "warga": "Payung",
+      "descWarga": "Alat lipat bertangkai untuk melindungi diri dari hujan atau panas.",
+      "penyusup": "Jas Hujan",
+      "descPenyusup": "Pakaian tahan air yang menutupi tubuh agar tidak basah saat hujan."
+    },
+    {
+      "warga": "Lemari Pakaian",
+      "descWarga": "Perabot rumah tangga bertingkat untuk menyimpan baju.",
+      "penyusup": "Rak Buku",
+      "descPenyusup": "Perabot rumah tangga tanpa pintu untuk memajang buku-buku."
+    },
+    {
+      "warga": "Televisi",
+      "descWarga": "Alat elektronik berbentuk layar untuk menonton siaran gambar dan suara.",
+      "penyusup": "Radio",
+      "descPenyusup": "Alat elektronik yang hanya mengeluarkan siaran berupa suara."
+    },
+    {
+      "warga": "Pensil",
+      "descWarga": "Alat tulis berinti grafit yang hasilnya bisa dihapus dengan karet penghapus.",
+      "penyusup": "Pulpen",
+      "descPenyusup": "Alat tulis yang menggunakan tinta cair untuk menulis."
+    },
+    {
+      "warga": "Gelas",
+      "descWarga": "Wadah berbentuk tabung silinder yang biasa digunakan untuk minum.",
+      "penyusup": "Cangkir",
+      "descPenyusup": "Wadah minum kecil yang memiliki pegangan di salah satu sisinya."
+    },
+    {
+      "warga": "Piring",
+      "descWarga": "Wadah ceper berbentuk bundar untuk meletakkan makanan.",
+      "penyusup": "Mangkok",
+      "descPenyusup": "Wadah cekung dan dalam, biasanya digunakan untuk makanan berkuah."
+    },
+    {
+      "warga": "Kulkas",
+      "descWarga": "Mesin pendingin penyimpan makanan agar awet dan tidak cepat busuk.",
+      "penyusup": "Oven",
+      "descPenyusup": "Alat pemanas tertutup untuk memanggang atau membakar makanan."
+    },
+    {
+      "warga": "Selimut",
+      "descWarga": "Kain lebar berbahan tebal untuk menghangatkan tubuh saat tidur.",
+      "penyusup": "Sprei",
+      "descPenyusup": "Kain tipis pelapis kasur atau alas tempat tidur."
+    },
+    {
+      "warga": "Meja",
+      "descWarga": "Perabot berkaki dengan permukaan datar untuk alas bekerja atau makan.",
+      "penyusup": "Kursi",
+      "descPenyusup": "Perabot rumah tangga yang difungsikan sebagai tempat duduk."
+    },
+    {
+      "warga": "Kunci",
+      "descWarga": "Alat logam berlekuk untuk membuka atau menutup gembok.",
+      "penyusup": "Gembok",
+      "descPenyusup": "Alat pengaman berbahan besi yang harus dibuka dengan kuncinya."
+    },
+    {
+      "warga": "Pintu",
+      "descWarga": "Jalur keluar masuk pada sebuah ruangan yang bisa dibuka tutup.",
+      "penyusup": "Jendela",
+      "descPenyusup": "Lubang ventilasi udara dan cahaya pada dinding rumah."
+    },
+    {
+      "warga": "Matahari",
+      "descWarga": "Bintang pusat tata surya yang memancarkan cahaya dan panas di siang hari.",
+      "penyusup": "Bulan",
+      "descPenyusup": "Satelit alami bumi yang bersinar terang memantulkan cahaya di malam hari."
+    },
+    {
+      "warga": "Garam",
+      "descWarga": "Bumbu dapur berbentuk kristal putih yang memberikan rasa asin.",
+      "penyusup": "Gula",
+      "descPenyusup": "Bumbu pemanis berbahan dasar tebu yang sering dicampur dalam minuman."
+    },
+    {
+      "warga": "Gunung",
+      "descWarga": "Permukaan bumi yang menjulang tinggi, ukurannya lebih besar dari bukit.",
+      "penyusup": "Lembah",
+      "descPenyusup": "Dataran rendah yang letaknya berada di antara perbukitan atau pegunungan."
+    },
+    {
+      "warga": "Sungai",
+      "descWarga": "Aliran air tawar memanjang secara alami dari hulu hingga bermuara di laut.",
+      "penyusup": "Danau",
+      "descPenyusup": "Cekungan besar di daratan yang digenangi oleh air tawar secara alami."
+    },
+    {
+      "warga": "Kertas",
+      "descWarga": "Lembaran tipis berbahan serat kayu yang digunakan untuk media menulis.",
+      "penyusup": "Karton",
+      "descPenyusup": "Bahan berserat kayu yang ukurannya lebih tebal dan kaku dari kertas biasa."
+    },
+    {
+      "warga": "Tas Ransel",
+      "descWarga": "Wadah pembawa barang yang dipakai dengan cara digendong di punggung.",
+      "penyusup": "Koper",
+      "descPenyusup": "Wadah besar berbentuk kotak bersleting, biasanya memiliki roda untuk bepergian."
+    },
+    {
+      "warga": "Mobil",
+      "descWarga": "Kendaraan darat roda empat yang memiliki mesin dan kabin penumpang.",
+      "penyusup": "Bus",
+      "descPenyusup": "Kendaraan darat besar beroda banyak untuk mengangkut banyak penumpang sekaligus."
+    },
+    {
+      "warga": "Kereta Api",
+      "descWarga": "Rangkaian gerbong yang berjalan di atas rel besi.",
+      "penyusup": "Truk",
+      "descPenyusup": "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat."
+    },
+    {
+      "warga": "Beras",
+      "descWarga": "Biji-bijian putih hasil gilingan padi yang merupakan makanan pokok orang Indonesia.",
+      "penyusup": "Gandum",
+      "descPenyusup": "Biji-bijian yang diolah menjadi tepung terigu sebagai bahan utama pembuat roti."
+    },
+    {
+      "warga": "Singa",
+      "descWarga": "Kucing besar yang dikenal sebagai raja hutan dengan surai lebat di lehernya.",
+      "penyusup": "Harimau",
+      "descPenyusup": "Kucing buas berukuran besar yang memiliki corak belang-belang."
+    },
+    {
+      "warga": "Kuda",
+      "descWarga": "Mamalia berkaki empat yang pandai berlari dan sering dijadikan hewan tunggangan.",
+      "penyusup": "Sapi",
+      "descPenyusup": "Mamalia berkaki empat ternak penghasil daging dan susu murni."
+    },
+    {
+      "warga": "Kera",
+      "descWarga": "Primata berukuran kecil hingga sedang yang pandai memanjat dan memiliki ekor.",
+      "penyusup": "Orangutan",
+      "descPenyusup": "Kera besar berbulu kemerahan asal Kalimantan dan Sumatera yang tidak berekor."
+    },
+    {
+      "warga": "Laptop",
+      "descWarga": "Komputer jinjing portabel yang bisa dilipat dan dibawa kemana-mana.",
+      "penyusup": "Tablet",
+      "descPenyusup": "Perangkat pintar berlayar sentuh lebar tanpa keyboard fisik bawaan."
+    },
+    {
+      "warga": "Smartphone",
+      "descWarga": "Telepon genggam pintar yang memiliki fungsi menyerupai komputer mini.",
+      "penyusup": "Telepon Rumah",
+      "descPenyusup": "Alat komunikasi suara yang tersambung kabel dan tidak bisa dibawa-bawa."
+    },
+    {
+      "warga": "Baju Kaos",
+      "descWarga": "Pakaian santai tanpa kerah dan kancing, sering disebut T-shirt.",
+      "penyusup": "Kemeja",
+      "descPenyusup": "Pakaian formal atau semi formal berkerah yang memiliki deretan kancing di depan."
+    },
+    {
+      "warga": "Celana Panjang",
+      "descWarga": "Pakaian penutup bagian bawah tubuh yang menutupi kaki hingga mata kaki.",
+      "penyusup": "Celana Pendek",
+      "descPenyusup": "Pakaian bawahan santai yang ukurannya hanya selutut atau di atas lutut."
+    },
+    {
+      "warga": "Lampu",
+      "descWarga": "Benda elektronik bercahaya untuk menerangi ruangan yang gelap.",
+      "penyusup": "Lilin",
+      "descPenyusup": "Sumber penerangan tradisional berupa batang parafin bersumbu yang dibakar."
+    },
+    {
+      "warga": "Kasur",
+      "descWarga": "Alas tebal dan empuk berukuran besar untuk berbaring atau tidur.",
+      "penyusup": "Bantal",
+      "descPenyusup": "Alas kepala berukuran kecil yang empuk, sangat nyaman dipakai tidur."
+    },
+    {
+      "warga": "Bawang Merah",
+      "descWarga": "Bumbu umbi lapis yang wajib ada untuk menumis berbagai masakan Nusantara.",
+      "penyusup": "Bawang Putih",
+      "descPenyusup": "Bumbu dapur beraroma tajam bersiung-siung yang umum untuk bumbu dasar."
+    },
+    {
+      "warga": "Kecap Manis",
+      "descWarga": "Bumbu cair kental berwarna hitam legam yang terbuat dari kedelai dan gula aren.",
+      "penyusup": "Saus Sambal",
+      "descPenyusup": "Bumbu cair berwarna merah kental dengan cita rasa pedas dan sedikit asam."
+    },
+    {
+      "warga": "Gigi",
+      "descWarga": "Struktur putih dan keras di dalam mulut untuk mengunyah makanan.",
+      "penyusup": "Lidah",
+      "descPenyusup": "Otot fleksibel di dalam mulut yang berfungsi sebagai indra pengecap rasa."
+    },
+    {
+      "warga": "Hidung",
+      "descWarga": "Alat pernapasan dan indra penciuman yang menonjol di tengah wajah.",
+      "penyusup": "Telinga",
+      "descPenyusup": "Organ pendengaran yang letaknya berada di sisi kiri dan kanan kepala."
+    },
+    {
+      "warga": "Jantung",
+      "descWarga": "Organ pemompa darah yang terus berdetak di dalam rongga dada.",
+      "penyusup": "Paru-paru",
+      "descPenyusup": "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida."
+    },
+    {
+      "warga": "Rumah",
+      "descWarga": "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.",
+      "penyusup": "Tenda",
+      "descPenyusup": "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas."
+    }
+  ]
+}
