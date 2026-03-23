@@ -22,7 +22,8 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "package": "com.anonymous.kecapsumput"
+      "package": "com.anonymous.kecapsumput",
+      "jsEngine": "jsc" 
     },
     "web": {
       "favicon": "./assets/favicon.png"
