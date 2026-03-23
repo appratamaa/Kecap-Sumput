@@ -28,10 +28,16 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Izinkan Kecap Sumput mengakses kamera untuk mengambil foto profil Marlin."
+          "cameraPermission": "Izinkan Kecap Sumput mengakses kamera untuk mengambil foto profil.",
+          "recordAudioAndroid": false
         }
       ],
-      "expo-av"
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ]
     ],
     "extra": {
       "eas": {

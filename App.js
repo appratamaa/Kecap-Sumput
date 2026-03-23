@@ -619,13 +619,6 @@ export default function App() {
   const mainSplashAnim = useRef(new Animated.Value(0)).current;
   const subtitleAnim = useRef(new Animated.Value(0)).current;
 
-  // MINTA IZIN KAMERA DI AWAL SAAT SPLASH
-  useEffect(() => {
-    (async () => {
-      if (!permission?.granted) await requestPermission();
-    })();
-  }, []);
-
   // EFEK SUBTITLE ROCKING
   useEffect(() => {
     const rock = () => {
