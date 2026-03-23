@@ -721,6 +721,7 @@ export default function App() {
   const [winnerLog, setWinnerLog] = useState("");
   const [mrWhiteGuess, setMrWhiteGuess] = useState("");
   const [turnCounter, setTurnCounter] = useState(1); 
+  const [isFlipped, setIsFlipped] = useState(false); // <--- TAMBAHAN BARU
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const shakeAnim = useRef(new Animated.Value(0)).current;
@@ -735,8 +736,17 @@ export default function App() {
     Animated.spring(flipAnim, { toValue: 180, friction: 8, tension: 10, useNativeDriver: true }).start(); 
   };
   const flipCardToFrontAndProceed = (callback) => { 
+    const flipCardToBack = () => { 
+    playSFX('flip');
+    setIsFlipped(true); // <--- TAMBAHAN BARU
+    Animated.spring(flipAnim, { toValue: 180, friction: 8, tension: 10, useNativeDriver: true }).start(); 
+  };
+  const flipCardToFrontAndProceed = (callback) => { 
     playSFX('click');
-    Animated.timing(flipAnim, { toValue: 0, duration: 250, useNativeDriver: true }).start(() => { callback(); }); 
+    Animated.timing(flipAnim, { toValue: 0, duration: 250, useNativeDriver: true }).start(() => { 
+      setIsFlipped(false); // <--- TAMBAHAN BARU
+      callback(); 
+    }); 
   };
 
   const triggerShake = () => {
@@ -1076,6 +1086,7 @@ export default function App() {
       </View>
     );
   }
+}
 
   // --- RENDER SCREENS UTAMA ---
   return (
@@ -1317,7 +1328,7 @@ export default function App() {
               <View style={styles.turnIndicator}><Text style={{fontSize: 24, fontWeight: '900', color: '#FFF'}}>{txt.TURN} {turnCounter} / {aliveCount}</Text></View>
               
               <View style={styles.flipWrapper}>
-                <Animated.View style={[styles.cardBase, frontAnimatedStyle, {justifyContent: 'center', alignItems: 'center', height: '100%'}]}>
+                <Animated.View pointerEvents={isFlipped ? 'none' : 'auto'} style={[styles.cardBase, frontAnimatedStyle, {justifyContent: 'center', alignItems: 'center', height: '100%'}]}>
                   <View style={[styles.imgBox, {width: 150, height: 150, borderRadius: 0, marginVertical: 30}]}>
                     {activePlayer.photoUri ? <Image source={{ uri: activePlayer.photoUri }} style={styles.imgFull} /> : <Text style={{fontSize: 70}}>{activePlayer.avatar}</Text>}
                   </View>
@@ -1327,7 +1338,7 @@ export default function App() {
                   </TouchableOpacity>
                 </Animated.View>
 
-                <Animated.View style={[styles.cardBase, backAnimatedStyle, { height: '100%', padding: 0 }]}>
+                <Animated.View pointerEvents={isFlipped ? 'auto' : 'none'} style={[styles.cardBase, backAnimatedStyle, { height: '100%', padding: 0 }]}>
                   <ScrollView contentContainerStyle={{justifyContent: 'center', alignItems: 'center', flexGrow: 1, padding: 25}}>
                     <Text style={styles.subTitleText}>{txt.YOUR_ROLE}</Text>
                     <Text style={[styles.hugeText, {color: activePlayer.role === txt.ROLE_CIVILIAN ? '#3498DB' : '#E74C3C', textAlign: 'center'}]}>{activePlayer.role.toUpperCase()}</Text>
