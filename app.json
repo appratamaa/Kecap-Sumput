@@ -18,7 +18,13 @@
       "adaptiveIcon": {
         "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/logo.png"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.CAMERA",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/logo.png"
@@ -42,6 +48,12 @@
       "eas": {
         "projectId": "f2bf5fd0-ba09-4e34-839c-d84e355a4fbf"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f2bf5fd0-ba09-4e34-839c-d84e355a4fbf"
     }
   }
 }

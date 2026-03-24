@@ -57,7 +57,7 @@ const DICTIONARY = {
     TAKE_PIC: "JEPRET FOTO",
     TAKE_PROFILE: "JEPRET PROFIL",
     ALERT_INVALID_TITLE: "TEU VALID!",
-    ALERT_INVALID_MSG: "Tebakan teu kenging ngandung angka atanapi karakter husus!",
+    ALERT_INVALID_MSG: "Tebakan teu kenging ngandung karakter husus salian ti strip!",
     ALERT_WRONG_TITLE: "SALAH TEBAK!",
     ALERT_WRONG_MSG: "Tebakan kecap rahasia Lutung salah!",
     ALERT_BTN_OK: "TERAS",
@@ -75,7 +75,11 @@ const DICTIONARY = {
     INFO_ROUND_DESC: "1 Putaran réngsé sanggeus kabéh pamaén méré pituduh terus VOTE. Kaulinan maju nepi ka aya tim nu meunang (1 Ronde).",
     INFO_SCORE_TITLE: "POIN SKOR",
     INFO_SCORE_DESC: "Meunang = +10 Poin\nSalamet ti Vote = +5 Poin\nKaéleminasi = -20 (Vote mimiti) / -10 (Vote saterusna).",
-    UNDERSTAND: "KURING NGAHARTI"
+    UNDERSTAND: "KURING NGAHARTI",
+    ALERT_CLAIM_FAIL_TITLE: "GAGAL VERIFIKASI",
+    ALERT_CLAIM_FAIL_MSG: "Sistem ngadeteksi anjeun teu acan follow atanapi langsung unfollow. Mangga cobian deui sing leres!",
+    ALERT_CLAIM_SUCCESS_TITLE: "BERHASIL!",
+    ALERT_CLAIM_SUCCESS_MSG: "Hatur nuhun tos follow! 50 kecap ékstra tos kabuka permanén dina alat ieu."
   },
   Indonesia: {
     GAME_SUB: "Edisi Pangandaran",
@@ -115,7 +119,7 @@ const DICTIONARY = {
     TAKE_PIC: "JEPRET FOTO",
     TAKE_PROFILE: "JEPRET PROFIL",
     ALERT_INVALID_TITLE: "TIDAK VALID!",
-    ALERT_INVALID_MSG: "Tebakan tidak boleh mengandung angka atau karakter spesial!",
+    ALERT_INVALID_MSG: "Tebakan tidak boleh mengandung karakter spesial selain strip!",
     ALERT_WRONG_TITLE: "SALAH TEBAK!",
     ALERT_WRONG_MSG: "Tebakan kata rahasia Lutung salah!",
     ALERT_BTN_OK: "LANJUTKAN",
@@ -133,7 +137,11 @@ const DICTIONARY = {
     INFO_ROUND_DESC: "1 Putaran selesai setelah semua pemain menyebutkan petunjuk lalu melakukan VOTE. Permainan berlanjut hingga salah satu tim menang (1 Ronde).",
     INFO_SCORE_TITLE: "POIN SKOR",
     INFO_SCORE_DESC: "Menang = +10 Poin\nBertahan dari Vote = +5 Poin\nTereliminasi = -20 (Vote pertama) / -10 (Vote lanjut).",
-    UNDERSTAND: "SAYA MENGERTI"
+    UNDERSTAND: "SAYA MENGERTI",
+    ALERT_CLAIM_FAIL_TITLE: "GAGAL VERIFIKASI",
+    ALERT_CLAIM_FAIL_MSG: "Sistem mendeteksi kamu belum mem-follow atau langsung unfollow. Silakan coba lagi dengan benar!",
+    ALERT_CLAIM_SUCCESS_TITLE: "BERHASIL!",
+    ALERT_CLAIM_SUCCESS_MSG: "Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini."
   },
   Inggris: {
     GAME_SUB: "Pangandaran Edition",
@@ -173,7 +181,7 @@ const DICTIONARY = {
     TAKE_PIC: "TAKE PHOTO",
     TAKE_PROFILE: "TAKE PROFILE",
     ALERT_INVALID_TITLE: "INVALID!",
-    ALERT_INVALID_MSG: "Guesses cannot contain numbers or special characters!",
+    ALERT_INVALID_MSG: "Guesses cannot contain special characters other than dashes!",
     ALERT_WRONG_TITLE: "WRONG GUESS!",
     ALERT_WRONG_MSG: "The Lutung secret word guess is wrong!",
     ALERT_BTN_OK: "CONTINUE",
@@ -191,7 +199,11 @@ const DICTIONARY = {
     INFO_ROUND_DESC: "1 Turn is completed after all players give a hint and then VOTE. The game continues until one team wins (1 Round).",
     INFO_SCORE_TITLE: "SCORE POINTS",
     INFO_SCORE_DESC: "Win = +10 Points\nSurvive Vote = +5 Points\nEliminated = -20 (First vote) / -10 (Subsequent votes).",
-    UNDERSTAND: "I UNDERSTAND"
+    UNDERSTAND: "I UNDERSTAND",
+    ALERT_CLAIM_FAIL_TITLE: "VERIFICATION FAILED",
+    ALERT_CLAIM_FAIL_MSG: "The system detected that you haven't followed or immediately unfollowed. Please try again properly!",
+    ALERT_CLAIM_SUCCESS_TITLE: "SUCCESS!",
+    ALERT_CLAIM_SUCCESS_MSG: "Thank you for following! 50 extra words have been permanently unlocked."
   }
 };
 
@@ -553,12 +565,23 @@ export default function App() {
   const appState = useRef(AppState.currentState);
   const followStartTime = useRef(null);
 
+  // --- STATE ANIMASI & KAMERA ---
+  const [hintSpeakerIndex, setHintSpeakerIndex] = useState(0);
+  const speakerAnim = useRef(new Animated.Value(0)).current;
+  const [isTakingPhoto, setIsTakingPhoto] = useState(false);
+
   // --- AUDIO SETUP ---
   const [bgmSound, setBgmSound] = useState(null);
   
   useEffect(() => {
     async function loadBGM() {
       try {
+        await Audio.setAudioModeAsync({
+          playsInSilentModeIOS: true,
+          staysActiveInBackground: true,
+          shouldDuckAndroid: true,
+          playThroughEarpieceAndroid: false,
+        });
         const { sound } = await Audio.Sound.createAsync(require('./assets/bgm.mp3'), { isLooping: true, volume: 0.3 });
         setBgmSound(sound);
         await sound.playAsync();
@@ -577,6 +600,7 @@ export default function App() {
       if (type === 'win') file = require('./assets/win.mp3');
       if (type === 'wrong') file = require('./assets/wrong.mp3');
       if (type === 'camera') file = require('./assets/camera.mp3');
+      if (type === 'flyup') file = require('./assets/flyup.mp3'); // Rekomendasi: Suara 'Swoosh' atau 'Pop' cepat
       
       if (file) {
         const { sound } = await Audio.Sound.createAsync(file);
@@ -651,11 +675,11 @@ export default function App() {
             setIsExtraWordsClaimed(true);
             setShowPurchaseModal(false);
             setTimeout(() => {
-               setCustomAlert({ title: 'BERHASIL!', message: 'Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini.', btnText: 'OKE', onConfirm: () => setCustomAlert(null) });
+               setCustomAlert({ title: txt.ALERT_CLAIM_SUCCESS_TITLE, message: txt.ALERT_CLAIM_SUCCESS_MSG, btnText: 'OK', onConfirm: () => setCustomAlert(null) });
             }, 500);
           } else { 
             setTimeout(() => {
-               setCustomAlert({ title: 'GAGAL VERIFIKASI', message: 'Sistem mendeteksi kamu belum mem-follow atau langsung unfollow. Silakan coba lagi dengan benar!', btnText: 'TUTUP', onConfirm: () => setCustomAlert(null) });
+               setCustomAlert({ title: txt.ALERT_CLAIM_FAIL_TITLE, message: txt.ALERT_CLAIM_FAIL_MSG, btnText: 'OK', onConfirm: () => setCustomAlert(null) });
             }, 500);
           }
           followStartTime.current = null;
@@ -665,7 +689,7 @@ export default function App() {
     });
 
     return () => { subscription.remove(); };
-  }, []);
+  }, [txt]);
 
   const claimExtraWords = async () => {
     playSFX('click');
@@ -730,6 +754,15 @@ export default function App() {
   const backInterpolate = flipAnim.interpolate({ inputRange: [0, 180], outputRange: ['180deg', '360deg'] });
   const frontOpacity = flipAnim.interpolate({ inputRange: [89, 90], outputRange: [1, 0] });
   const backOpacity = flipAnim.interpolate({ inputRange: [89, 90], outputRange: [0, 1] });
+
+  // EFEK ANIMASI TERBANG (FLY UP)
+  useEffect(() => {
+    if (screen === 'SPEAKER_TURN') {
+      speakerAnim.setValue(0);
+      playSFX('flyup');
+      Animated.spring(speakerAnim, { toValue: 1, friction: 6, tension: 40, useNativeDriver: true }).start();
+    }
+  }, [screen, hintSpeakerIndex]);
 
   const flipCardToBack = () => { 
     playSFX('flip');
@@ -807,14 +840,13 @@ export default function App() {
   const takeProfilePicture = async () => {
     playSFX('camera');
     if (cameraRef.current) {
-      const photo = await cameraRef.current.takePictureAsync({ quality: 0.5 });
+      const photo = await cameraRef.current.takePictureAsync({ quality: 0.5, shutterSound: false });
       updatePlayerInfo(activeCameraPlayerId, 'photoUri', photo.uri);
       setIsCameraOpen(false);
     }
   };
 
   const startRound = () => {
-    playSFX('click');
     let db = wordDatabase.pangandaran || [{warga: "Pantai", descWarga: "Wisata Air", penyusup: "Gunung", descPenyusup: "Tempat Tinggi"}];
     if (isExtraWordsClaimed && wordDatabase.ekstra) {
       db = [...db, ...wordDatabase.ekstra];
@@ -842,6 +874,14 @@ export default function App() {
     for (let i = rolePool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [rolePool[i], rolePool[j]] = [rolePool[j], rolePool[i]];
+    }
+
+    // Pastikan Lutung bukan urutan pertama di putaran awal
+    if (rolePool[0].role === txt.ROLE_MRWHITE) {
+      const swapIdx = rolePool.findIndex(r => r.role !== txt.ROLE_MRWHITE);
+      if (swapIdx > 0) {
+        [rolePool[0], rolePool[swapIdx]] = [rolePool[swapIdx], rolePool[0]];
+      }
     }
 
     const alivePlayers = players.map((p, index) => ({
@@ -888,22 +928,29 @@ export default function App() {
         setTurnCounter(prev => prev + 1);
       } else { 
         const isEndgame = checkEndgameOrProceed();
-        if (!isEndgame) changeScreen('DISCUSSION'); 
+        if (!isEndgame) {
+          // Cari pemain pertama yang masih hidup untuk fase Hint
+          let startIdx = 0;
+          while(startIdx < players.length && !players[startIdx].isAlive) startIdx++;
+          setHintSpeakerIndex(startIdx);
+          changeScreen('SPEAKER_TURN'); 
+        }
       }
     });
   };
 
   const processWin = (winningTeam) => {
     const updatedPlayers = players.map(p => {
+      let newScore = p.score;
       // JIKA LUTUNG MENANG: Lutung +50 (menebus minus eliminasi), Banteng +15, Marlin +5
       if (winningTeam === txt.ROLE_MRWHITE) {
-         if (p.role === txt.ROLE_MRWHITE) return { ...p, score: p.score + 50 };
-         if (p.role === txt.ROLE_UNDERCOVER) return { ...p, score: p.score + 15 };
-         if (p.role === txt.ROLE_CIVILIAN) return { ...p, score: p.score + 5 };
+         if (p.role === txt.ROLE_MRWHITE) newScore += 50;
+         else if (p.role === txt.ROLE_UNDERCOVER) newScore += 15;
+         else if (p.role === txt.ROLE_CIVILIAN) newScore += 5;
       } else {
-         if (p.role === winningTeam) return { ...p, score: p.score + 10 }; 
+         if (p.role === winningTeam) newScore += 10; 
       }
-      return p;
+      return { ...p, score: Math.max(0, newScore) }; // Kunci skor agar tidak tembus angka minus
     });
     setPlayers(updatedPlayers);
     setWinnerLog(`TIM ${winningTeam.toUpperCase()} MENANG!`);
@@ -919,9 +966,9 @@ export default function App() {
     const updatedPlayers = players.map(p => {
       if (p.id === selectedVoteId) {
         const penalty = isFirstVote ? -20 : -10;
-        return { ...p, isAlive: false, score: p.score + penalty };
+        return { ...p, isAlive: false, score: Math.max(0, p.score + penalty) };
       } else if (p.isAlive) {
-        return { ...p, score: p.score + 5 }; 
+        return { ...p, score: Math.max(0, p.score + 5) }; 
       }
       return p;
     });
@@ -938,14 +985,29 @@ export default function App() {
       changeScreen('MR_WHITE_GUESS');
     } else {
       const isEndgame = checkEndgameOrProceed();
-      if (!isEndgame) changeScreen('DISCUSSION');
+      if (!isEndgame) {
+        // ACAK URUTAN PEMAIN SETELAH VOTE AGAR LEBIH ADIL
+        let nextPlayers = [...players];
+        for (let i = nextPlayers.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [nextPlayers[i], nextPlayers[j]] = [nextPlayers[j], nextPlayers[i]];
+        }
+        setPlayers(nextPlayers);
+        
+        let startIdx = 0;
+        while(startIdx < nextPlayers.length && !nextPlayers[startIdx].isAlive) startIdx++;
+        setHintSpeakerIndex(startIdx);
+        
+        changeScreen('SPEAKER_TURN');
+      }
     }
   };
 
   const handleMrWhiteGuess = () => {
     playSFX('click');
     const rawGuess = mrWhiteGuess.trim();
-    const regexValid = /^[a-zA-Z\s]*$/;
+    // Validasi menerima huruf, angka, spasi, dan dash
+    const regexValid = /^[a-zA-Z0-9\s\-]*$/;
     
     // JIKA TIDAK VALID (TETAP DI SCREEN MENEBAK)
     if (!regexValid.test(rawGuess) || rawGuess === '') {
@@ -981,10 +1043,25 @@ export default function App() {
           if (aliveM === 0) processWin(txt.ROLE_UNDERCOVER);
           else if (aliveB === 0) processWin(txt.ROLE_CIVILIAN);
           else if (aliveM <= aliveB) processWin(txt.ROLE_UNDERCOVER);
-          else changeScreen('DISCUSSION');
+          else changeScreen('DISCUSSION'); // Jika lanjut, masuk ke menu bebas (VOTE)
         }
       });
     }
+  };
+
+  // ANIMASI TERBANG TURUN (FLY DOWN) DAN LANJUT KE PEMAIN BERIKUTNYA
+  const nextSpeaker = () => {
+    Animated.timing(speakerAnim, { toValue: 0, duration: 300, useNativeDriver: true }).start(() => {
+        let nextIdx = hintSpeakerIndex + 1;
+        while(nextIdx < players.length && !players[nextIdx].isAlive) nextIdx++;
+        
+        if (nextIdx < players.length) {
+            setHintSpeakerIndex(nextIdx);
+        } else {
+            // Semua pemain sudah giliran memberi clue, langsung ke grid bebas (VOTE)
+            changeScreen('DISCUSSION'); 
+        }
+    });
   };
 
   const startPhotoboothSession = async () => {
@@ -997,18 +1074,24 @@ export default function App() {
   };
 
   const takeBoothPicture = async () => {
+    if (isTakingPhoto) return; // Mencegah spam klik kamera yang bikin force close
     playSFX('camera');
     if (cameraRef.current) {
-      const photo = await cameraRef.current.takePictureAsync({ quality: 0.6 });
-      const currentPlayerId = players[currentBoothIndex].id;
-      
-      setBoothPhotos(prev => ({ ...prev, [currentPlayerId]: photo.uri }));
-      
-      if (currentBoothIndex + 1 < players.length) {
-        setCurrentBoothIndex(prev => prev + 1); 
-      } else {
-        setIsCameraOpen(false); 
-        changeScreen('PHOTOBOOTH_RESULT', true); // Silent change
+      setIsTakingPhoto(true);
+      try {
+        const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, shutterSound: false });
+        const currentPlayerId = players[currentBoothIndex].id;
+        
+        setBoothPhotos(prev => ({ ...prev, [currentPlayerId]: photo.uri }));
+        
+        if (currentBoothIndex + 1 < players.length) {
+          setCurrentBoothIndex(prev => prev + 1); 
+        } else {
+          setIsCameraOpen(false); 
+          changeScreen('PHOTOBOOTH_RESULT', true); // Silent change
+        }
+      } finally {
+        setIsTakingPhoto(false);
       }
     }
   };
@@ -1064,7 +1147,7 @@ export default function App() {
           </TouchableOpacity>
         </View>
 
-        <CameraView style={{flex: 1}} facing={cameraFacing} flash={cameraFlash} ref={cameraRef}>
+        <CameraView style={{flex: 1}} facing={cameraFacing} flash={cameraFlash} enableShutterSound={false} mute={true} ref={cameraRef}>
           <View style={{flex: 1, justifyContent: 'flex-end', padding: 30, zIndex: 10}}>
             {boothMode && (
                <View style={[styles.cardBase, {backgroundColor: '#F1C40F', marginBottom: 20}]}>
@@ -1364,12 +1447,46 @@ export default function App() {
         );
       })()}
 
+      {screen === 'SPEAKER_TURN' && (() => {
+        const currentSpeaker = players[hintSpeakerIndex];
+        if (!currentSpeaker) return null;
+        
+        const translateY = speakerAnim.interpolate({
+            inputRange: [0, 1],
+            outputRange: [screenWidth * 2, 0] 
+        });
+        const scale = speakerAnim.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0.3, 1]
+        });
+
+        return (
+          <SafeAreaView style={styles.container}>
+            <AnimatedBackgroundDecor />
+            <View style={styles.contentCenter}>
+               <Text style={[styles.headerText, {marginBottom: 10}]}>{txt.HINT}</Text>
+               <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 30, color: '#7F8C8D', fontSize: 20}]}>{txt.TURN} {currentSpeaker.name.toUpperCase()}</Text>
+               
+               <Animated.View style={{ transform: [{ translateY }, { scale }] }}>
+                  <TouchableOpacity activeOpacity={0.9} style={[styles.cardBase, {alignItems: 'center', padding: 40}]} onPress={nextSpeaker}>
+                     <View style={[styles.imgBox, {width: 150, height: 150}]}>
+                        {currentSpeaker.photoUri ? <Image source={{ uri: currentSpeaker.photoUri }} style={styles.imgFull} /> : <Text style={{fontSize: 70}}>{currentSpeaker.avatar}</Text>}
+                     </View>
+                     <Text style={styles.bigName}>{currentSpeaker.name}</Text>
+                     <Text style={[styles.btnPrimaryText, {color: '#3498DB', marginTop: 25, fontSize: 18}]}>TAP UNTUK LANJUT</Text>
+                  </TouchableOpacity>
+               </Animated.View>
+            </View>
+          </SafeAreaView>
+        );
+      })()}
+
       {screen === 'DISCUSSION' && (
         <SafeAreaView style={styles.container}>
           <AnimatedBackgroundDecor />
           <ScrollView contentContainerStyle={{padding: 20, paddingBottom: 60}}>
             <Text style={styles.headerText}>{txt.DISCUSSION}</Text>
-            <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 20, color: '#7F8C8D'}]}>{txt.HINT}</Text>
+            <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 20, color: '#7F8C8D'}]}>SIAPAKAH PENYUSUPNYA?</Text>
             
             <View style={styles.grid2Col}>
               {players.map(p => (
@@ -1514,7 +1631,7 @@ export default function App() {
                 </TouchableOpacity>
               </View>
 
-              <TouchableOpacity style={[styles.btnPrimary, {marginTop: 20, backgroundColor: '#2ECC71'}]} onPress={() => { playSFX('click'); setRound(round + 1); startRound(); }}>
+              <TouchableOpacity style={[styles.btnPrimary, {marginTop: 20, backgroundColor: '#2ECC71'}]} onPress={() => { setRound(round + 1); startRound(); }}>
                 <Text style={styles.btnPrimaryText}>{txt.PLAY_AGAIN} {round + 1}</Text>
               </TouchableOpacity>
               <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#ECF0F1', marginTop: 10}]} onPress={() => { playSFX('click'); changeScreen('HOME', true); }}>
@@ -1720,7 +1837,7 @@ const styles = StyleSheet.create({
   scoreRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 15, paddingHorizontal: 15, backgroundColor: '#FFF', marginBottom: 12, ...tactileShadow },
   scoreRank: { fontSize: 24, fontWeight: '900', color: '#2C3E50' },
   scoreName: { fontSize: 18, fontWeight: '900', color: '#2C3E50' },
-  scorePoint: { fontSize: 26, fontWeight: '900', color: '#E74C3C' },
+  scorePoint: { fontSize: 20, fontWeight: '900', color: '#E74C3C' },
   imgFull: { width: '100%', height: '100%', resizeMode: 'cover' },
 
   boothPhotoCard: { backgroundColor: '#FFF', ...tactileShadow },
