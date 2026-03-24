@@ -11,6 +11,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Audio } from 'expo-av';
+import * as Updates from 'expo-updates'; // <--- MODUL UPDATE OTOMATIS
 
 const wordDatabase = require('./assets/words.json');
 const DEFAULT_AVATARS = ['🐟', '🐠', '🐡', '🐂', '🐃', '🐄', '🐒', '🐵', '🦍', '🐟', '🐂', '🐒'];
@@ -321,7 +322,7 @@ const EXACT_TRANSLATIONS = {
     "Kendaraan darat roda empat yang memiliki mesin dan kabin penumpang.": "Kandaraan darat roda opat nu boga mesin jeung kabin panumpang.",
     "Kendaraan darat besar beroda banyak untuk mengangkut banyak penumpang sekaligus.": "Kandaraan darat badag roda loba pikeun ngangkut panumpang sakaligus.",
     "Rangkaian gerbong yang berjalan di atas rel besi.": "Runtuyan gerbong nu leumpang di luhur rél beusi.",
-    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Kandaraan bermotor badag nu didésain husus pikeun ngangkut barang beurat.",
+    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Large motorized vehicle specially designed to transport heavy goods.",
     "Biji-bijian putih hasil gilingan padi yang merupakan makanan pokok orang Indonesia.": "Siki-sikian bodas hasil gilingan paré nu mangrupa kadaharan poko urang Indonésia.",
     "Biji-bijian yang diolah menjadi tepung terigu sebagai bahan utama pembuat roti.": "Siki-sikian nu diolah jadi tipung tarigu salaku bahan utama nyieun roti.",
     "Kucing besar yang dikenal sebagai raja hutan dengan surai lebat di lehernya.": "Ucing badag nu dipikawanoh salaku raja leuweung nu bulu kandel di beuheungna.",
@@ -578,7 +579,7 @@ export default function App() {
       try {
         await Audio.setAudioModeAsync({
           playsInSilentModeIOS: true,
-          staysActiveInBackground: true,
+          staysActiveInBackground: false, // <-- DIUBAH AGAR MUTE SAAT BACKGROUND
           shouldDuckAndroid: true,
           playThroughEarpieceAndroid: false,
         });
@@ -591,6 +592,31 @@ export default function App() {
     return () => { if (bgmSound) bgmSound.unloadAsync(); }
   }, []);
 
+  // --- CEK UPDATE OTOMATIS (OTA) ---
+  useEffect(() => {
+    async function checkUpdates() {
+      try {
+        const update = await Updates.checkForUpdateAsync();
+        if (update.isAvailable) {
+          setCustomAlert({
+            title: "UPDATE TERSEDIA",
+            message: "Versi terbaru Kecap Sumput telah tersedia. Aplikasi akan dimuat ulang untuk memperbarui fitur.",
+            btnText: "UPDATE SEKARANG",
+            onConfirm: async () => {
+              await Updates.fetchUpdateAsync();
+              await Updates.reloadAsync();
+            }
+          });
+        }
+      } catch (e) {
+        // Abaikan error saat di development (Expo Go)
+      }
+    }
+    if (!__DEV__) {
+      checkUpdates();
+    }
+  }, []);
+
   const playSFX = async (type) => {
     try {
       let file;
@@ -600,10 +626,17 @@ export default function App() {
       if (type === 'win') file = require('./assets/win.mp3');
       if (type === 'wrong') file = require('./assets/wrong.mp3');
       if (type === 'camera') file = require('./assets/camera.mp3');
-      if (type === 'flyup') file = require('./assets/flyup.mp3'); // Rekomendasi: Suara 'Swoosh' atau 'Pop' cepat
+      if (type === 'flyup') file = require('./assets/flyup.mp3');
       
       if (file) {
         const { sound } = await Audio.Sound.createAsync(file);
+        
+        // MENGHINDARI MEMORY LEAK AUDIO DI ANDROID (SUARA HILANG)
+        sound.setOnPlaybackStatusUpdate((status) => {
+          if (status.didJustFinish) {
+            sound.unloadAsync();
+          }
+        });
         
         // JIKA MENANG, PAUSE BGM SEMENTARA MENUNGGU EFEK WIN SELESAI
         if (type === 'win' && bgmSound) {
@@ -840,7 +873,7 @@ export default function App() {
   const takeProfilePicture = async () => {
     playSFX('camera');
     if (cameraRef.current) {
-      const photo = await cameraRef.current.takePictureAsync({ quality: 0.5, shutterSound: false });
+      const photo = await cameraRef.current.takePictureAsync({ quality: 0.5, shutterSound: false }); // MUTED SHUTTER
       updatePlayerInfo(activeCameraPlayerId, 'photoUri', photo.uri);
       setIsCameraOpen(false);
     }
@@ -860,7 +893,8 @@ export default function App() {
       wordSU: translateWord(item.warga, 'Sunda'),
       wordEN: translateWord(item.warga, 'Inggris'),
       word: translateWord(item.warga, language), 
-      desc: translateWord(item.descWarga, language) 
+      desc: translateWord(item.descWarga, language),
+      undercoverWord: translateWord(item.penyusup, language) // <--- MENYIMPAN KATA BANTENG
     });
 
     let rolePool = [];
@@ -1079,7 +1113,7 @@ export default function App() {
     if (cameraRef.current) {
       setIsTakingPhoto(true);
       try {
-        const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, shutterSound: false });
+        const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, shutterSound: false }); // MUTED SHUTTER
         const currentPlayerId = players[currentBoothIndex].id;
         
         setBoothPhotos(prev => ({ ...prev, [currentPlayerId]: photo.uri }));
@@ -1598,7 +1632,10 @@ export default function App() {
 
               <View style={{alignItems: 'center', marginBottom: 20, backgroundColor: '#FFF', padding: 15, ...styles.shadowTactile}}>
                 <Text style={styles.subTitleText}>{txt.SECRET_WORD} {txt.ROLE_CIVILIAN.toUpperCase()}:</Text>
-                <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word.toUpperCase()}</Text>
+                <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word?.toUpperCase()}</Text>
+                {/* TAMBAHAN KATA BANTENG */}
+                <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
+                <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord?.toUpperCase()}</Text>
               </View>
 
               <View style={{borderTopWidth: 4, borderColor: '#2C3E50', paddingTop: 15}}>
@@ -1646,7 +1683,10 @@ export default function App() {
                 </View>
                 <View style={{alignItems: 'center', marginBottom: 20, backgroundColor: '#FFF', padding: 15, ...styles.shadowTactile}}>
                   <Text style={styles.subTitleText}>{txt.SECRET_WORD} {txt.ROLE_CIVILIAN.toUpperCase()}:</Text>
-                  <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word.toUpperCase()}</Text>
+                  <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word?.toUpperCase()}</Text>
+                  {/* TAMBAHAN KATA BANTENG */}
+                  <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
+                  <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord?.toUpperCase()}</Text>
                 </View>
                 <View style={{borderTopWidth: 4, borderColor: '#2C3E50', paddingTop: 15}}>
                   <Text style={[styles.headerText, {fontSize: 26, textAlign: 'center', marginBottom: 15}]}>{txt.SCOREBOARD}</Text>
