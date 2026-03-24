@@ -895,9 +895,9 @@ export default function App() {
 
   const processWin = (winningTeam) => {
     const updatedPlayers = players.map(p => {
-      // JIKA LUTUNG MENANG: Lutung +30, Banteng +15, Marlin +5 (Lutung pasti ranking 1)
+      // JIKA LUTUNG MENANG: Lutung +50 (menebus minus eliminasi), Banteng +15, Marlin +5
       if (winningTeam === txt.ROLE_MRWHITE) {
-         if (p.role === txt.ROLE_MRWHITE) return { ...p, score: p.score + 30 };
+         if (p.role === txt.ROLE_MRWHITE) return { ...p, score: p.score + 50 };
          if (p.role === txt.ROLE_UNDERCOVER) return { ...p, score: p.score + 15 };
          if (p.role === txt.ROLE_CIVILIAN) return { ...p, score: p.score + 5 };
       } else {
