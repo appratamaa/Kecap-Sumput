@@ -21,7 +21,7 @@ const GAME_VERSION = "v1.0";
 
 const DICTIONARY = {
   Sunda: {
-    GAME_SUB: "Édisi Bandung",
+    GAME_SUB: "Édisi Pangandaran",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
@@ -83,7 +83,7 @@ const DICTIONARY = {
     ALERT_CLAIM_SUCCESS_MSG: "Hatur nuhun tos follow! 50 kecap ékstra tos kabuka permanén dina alat ieu."
   },
   Indonesia: {
-    GAME_SUB: "Edisi Bandung",
+    GAME_SUB: "Edisi Pangandaran",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
@@ -145,7 +145,7 @@ const DICTIONARY = {
     ALERT_CLAIM_SUCCESS_MSG: "Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini."
   },
   Inggris: {
-    GAME_SUB: "Bandung Edition",
+    GAME_SUB: "Pangandaran Edition",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
