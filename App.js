@@ -1290,8 +1290,15 @@ export default function App() {
           </View>
           <Text style={[styles.headerText, {marginHorizontal: 20}]}>{txt.SETUP_PLAYER}</Text>
           
-          <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{flex: 1}}>
-            <ScrollView contentContainerStyle={{padding: 15, paddingBottom: 50}}>
+          <KeyboardAvoidingView 
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
+            keyboardVerticalOffset={Platform.OS === 'android' ? 25 : 0}
+            style={{flex: 1}}
+          >
+            <ScrollView 
+              contentContainerStyle={{padding: 15, paddingBottom: 150}}
+              keyboardShouldPersistTaps="handled"
+            >
               <View style={styles.grid2Col}>
                 {players.map((p) => (
                   <View key={p.id} style={styles.gridItem}>
