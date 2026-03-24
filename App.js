@@ -11,7 +11,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Audio } from 'expo-av';
-import * as Updates from 'expo-updates'; // <--- MODUL UPDATE OTOMATIS
+import * as Updates from 'expo-updates';
 
 const wordDatabase = require('./assets/words.json');
 const DEFAULT_AVATARS = ['🐟', '🐠', '🐡', '🐂', '🐃', '🐄', '🐒', '🐵', '🦍', '🐟', '🐂', '🐒'];
@@ -21,7 +21,7 @@ const GAME_VERSION = "v1.0";
 
 const DICTIONARY = {
   Sunda: {
-    GAME_SUB: "Édisi Pangandaran",
+    GAME_SUB: "Édisi Bandung",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
@@ -83,7 +83,7 @@ const DICTIONARY = {
     ALERT_CLAIM_SUCCESS_MSG: "Hatur nuhun tos follow! 50 kecap ékstra tos kabuka permanén dina alat ieu."
   },
   Indonesia: {
-    GAME_SUB: "Edisi Pangandaran",
+    GAME_SUB: "Edisi Bandung",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
@@ -145,7 +145,7 @@ const DICTIONARY = {
     ALERT_CLAIM_SUCCESS_MSG: "Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini."
   },
   Inggris: {
-    GAME_SUB: "Pangandaran Edition",
+    GAME_SUB: "Bandung Edition",
     ROLE_CIVILIAN: "Marlin",
     ROLE_UNDERCOVER: "Banteng",
     ROLE_MRWHITE: "Lutung",
@@ -341,153 +341,6 @@ const EXACT_TRANSLATIONS = {
     "Pakaian bawahan santai yang ukurannya hanya selutut atau di atas lutut.": "Papakéan bawahan santéy nu ukuranna ngan saukur tuur atawa luhureun tuur.",
     "Benda elektronik bercahaya untuk menerangi ruangan yang gelap.": "Barang éléktronik caang pikeun nyaangan rohangan nu poék.",
     "Sumber penerangan tradisional berupa batang parafin bersumbu yang dibakar.": "Sumber panerangan tradisional mangrupa watang parafin sumbuan nu diduruk.",
-    "Alas tebal dan empuk berukuran besar untuk berbaring atau tidur.": "Alas kandel sarta hipu ukuran badag pikeun ngagolér atawa saré.",
-    "Alas kepala berukuran kecil yang empuk, sangat nyaman dipakai tidur.": "Alas sirah ukuran leutik nu hipu, pohara merenah dipaké saré.",
-    "Bumbu umbi lapis yang wajib ada untuk menumis berbagai masakan Nusantara.": "Bumbu beuti lapis nu wajib aya pikeun ngagoréng bumbu asakan Nusantara.",
-    "Bumbu dapur beraroma tajam bersiung-siung yang umum untuk bumbu dasar.": "Bumbu pawon seungit seukeut mangsiung-siung nu ilahar jadi bumbu dasar.",
-    "Bumbu cair kental berwarna hitam legam yang terbuat dari kedelai dan gula aren.": "Bumbu éncér kandel warna hideung lestreng tina kadelé jeung gula kawung.",
-    "Bumbu cair berwarna merah kental dengan cita rasa pedas dan sedikit asam.": "Bumbu éncér warna beureum kandel mibanda rasa lada sarta rada haseum.",
-    "Struktur putih dan keras di dalam mulut untuk mengunyah makanan.": "Wangunan bodas sarta teuas di jero sungut pikeun nyapek kadaharan.",
-    "Otot fleksibel di dalam mulut yang berfungsi sebagai indra pengecap rasa.": "Otot fléksibel di jero sungut nu fungsina minangka indra pangrasa.",
-    "Alat pernapasan dan indra penciuman yang menonjol di tengah wajah.": "Alat rénghap jeung indra pangambeu nu nonjol di tengah beungeut.",
-    "Organ pendengaran yang letaknya berada di sisi kiri dan kanan kepala.": "Organ pangrungu nu perenahna di gigir kénca jeung katuhu sirah.",
-    "Organ pemompa darah yang terus berdetak di dalam rongga dada.": "Organ ngompa getih nu tuluy ratug di jero rongga dada.",
-    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Organ rénghap spons di dada tempat bursa oksigén jeung karbon dioksida.",
-    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Wangunan tempat cicing sarta netep pikeun ngiuhan tina hujan jeung panas.",
-    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Tempat ngiuhan portabel tina lawon nu biasa dipaké kémping di alam bébas."
-  },
-  Inggris: {
-    "Pantai Barat": "West Beach", "Pantai Timur": "East Beach", "Gunung": "Mountain", "Banteng": "Wild Bull", "Rusa": "Deer",
-    "Gua Jepang": "Japanese Cave", "Es Kelapa Muda": "Young Coconut Ice", "Kopi Hitam": "Black Coffee", "Teh Manis": "Sweet Tea",
-    "Sepeda Motor": "Motorcycle", "Rumah": "House", "Garam": "Salt", "Kucing": "Cat", "Anjing": "Dog", "Matahari": "Sun",
-    "Spot utama melihat sunset, ombaknya bersahabat untuk berenang dan surfing.": "Main spot to watch the sunset, friendly waves for swimming and surfing.",
-    "Surganya kuliner seafood dan tempat terbaik berburu sunrise di pagi buta.": "Seafood culinary paradise and the best place to hunt for sunrise at dawn.",
-    "Sungai bening dengan aktivitas Body Rafting menembus gua dan pepohonan rimbun.": "Clear river with Body Rafting activities through caves and lush trees.",
-    "Dikenal sebagai Cukang Taneuh, wisata perahu menyusuri tebing eksotis bak kanyon Amerika.": "Known as Cukang Taneuh, a boat tour along exotic cliffs like an American canyon.",
-    "Pantai eksotis dengan pulau-pulau karang kecil, sangat cocok untuk kemping.": "Exotic beach with small coral islands, very suitable for camping.",
-    "Pantai dengan ombak panjang yang menjadi favorit para peselancar lokal maupun dunia.": "Beach with long waves that is a favorite of local and world surfers.",
-    "Bukit karang dengan pemandangan laut lepas, konon ada batu berbentuk sirip hiu.": "Coral hill with open sea views, word has it there is a shark fin shaped rock.",
-    "Kawasan perhutani dengan legenda cinta sejati nenek (nini) yang menunggu kakeknya.": "Forestry area with the true love legend of a grandmother (nini) waiting for her grandfather.",
-    "Sup ikan khas Pangandaran berkuah kuning segar dengan paduan kecombrang (honje).": "Pangandaran typical fish soup with fresh yellow broth mixed with torch ginger.",
-    "Ikan asin primadona oleh-oleh Pangandaran, dagingnya tebal dan empuk seperti roti saat digoreng.": "The prime salted fish souvenir of Pangandaran, thick and soft meat like bread when fried.",
-    "Hutan konservasi di semenanjung Pangandaran yang dipenuhi monyet, rusa, dan gua bersejarah.": "Conservation forest in the Pangandaran peninsula filled with monkeys, deer, and historical caves.",
-    "Area pantai bersih tanpa karang, tempat bersandar bangkai kapal menteri Susi.": "Clean beach area without corals, the resting place of Minister Susi's shipwreck.",
-    "Warung sate legendaris di Pangandaran yang sudah berdiri puluhan tahun.": "Legendary satay stall in Pangandaran that has been standing for decades.",
-    "Sate ayam dengan bumbu kacang kental yang umum ditemui di berbagai daerah.": "Chicken satay with thick peanut sauce commonly found in various regions.",
-    "Gua pertahanan yang digali paksa pada masa penjajahan Dai Nippon.": "Defense cave forcibly dug during the Dai Nippon occupation.",
-    "Gua dengan stalaktit indah dan konon dulunya adalah keraton keraton Prabu Anggalarang.": "Cave with beautiful stalactites and supposedly used to be the palace of King Anggalarang.",
-    "Minuman segar dari bunga kecombrang yang berkhasiat menurunkan kolesterol.": "Fresh drink from torch ginger flower that helps lower cholesterol.",
-    "Minuman wajib pesisir pantai yang langsung diseruput dari batoknya.": "Must-have coastal drink directly sipped from its shell.",
-    "Singkong fermentasi khas Sunda dengan rasa manis legit dan sedikit asam.": "Sundanese typical fermented cassava with a sweet and slightly sour taste.",
-    "Sajian fermentasi serupa peuyeum, namun biasanya lebih lembek dan berair.": "Fermented dish similar to peuyeum, but usually softer and watery.",
-    "Aquarium raksasa indoor di Pangandaran yang menampilkan biota laut Indonesia.": "Giant indoor aquarium in Pangandaran displaying Indonesian marine biota.",
-    "Wisata edukasi di Pangandaran untuk mengenal berbagai jenis nyamuk dan risetnya.": "Educational tour in Pangandaran to get to know various types of mosquitoes and their research.",
-    "Maskapai penerbangan perintis milik Susi Pudjiastuti, tokoh asli Pangandaran.": "Pioneer airline owned by Susi Pudjiastuti, a native figure of Pangandaran.",
-    "Bandar udara yang berlokasi di Cijulang, melayani rute perintis ke Pangandaran.": "Airport located in Cijulang, serving pioneer routes to Pangandaran.",
-    "Mitos penguasa laut selatan yang erat kaitannya dengan pantangan memakai baju hijau.": "Myth of the southern sea ruler closely related to the taboo of wearing green clothes.",
-    "Warna pakaian yang menjadi mitos larangan saat berkunjung ke pantai selatan.": "Clothing color that becomes a prohibited myth when visiting the southern beach.",
-    "Hewan liar dilindungi yang sesekali bisa terlihat di kawasan Cagar Alam Pananjung.": "Protected wild animals that can occasionally be seen in the Pananjung Nature Reserve area.",
-    "Mamalia jinak yang berkeliaran bebas menyapa wisatawan di sekitar Cagar Alam.": "Tame mammals roaming freely greeting tourists around the Nature Reserve.",
-    "Bunga langka padma yang sesekali mekar di dalam Cagar Alam Pangandaran.": "Rare padma flower that occasionally blooms inside the Pangandaran Nature Reserve.",
-    "Bunga berbau busuk (Amorphophallus) yang bentuknya menjulang tinggi ke atas.": "Foul-smelling flower (Amorphophallus) that towers high upwards.",
-    "Kendaraan hias dengan musik keras, favorit wisatawan untuk keliling Pangandaran malam hari.": "Decorated vehicle with loud music, tourists' favorite for touring Pangandaran at night.",
-    "Sepeda panjang berboncengan yang banyak disewakan di pinggir Pantai Barat.": "Long tandem bicycles widely rented on the edge of West Beach.",
-    "Olahraga berselancar menunggangi ombak, sangat populer di Pantai Batu Karas.": "Surfing sport riding the waves, very popular at Batu Karas Beach.",
-    "Menyusuri arus sungai menggunakan pelampung badan, populer di Citumang & Green Canyon.": "Tracing river currents using body floats, popular in Citumang & Green Canyon.",
-    "Ruang publik megah di Pamugaran dengan menara pandang untuk rekreasi warga.": "Magnificent public space in Pamugaran with a viewing tower for citizen recreation.",
-    "Deretan resto dan cafe estetik pinggir pantai bergaya bambu layaknya Jimbaran Bali.": "A row of aesthetic beachfront restaurants and cafes in bamboo style like Jimbaran Bali.",
-    "Ikon patung ikan Blue Marlin yang sedang melompat, lambang Kabupaten Pangandaran.": "The icon of the jumping Blue Marlin fish statue, symbol of Pangandaran Regency.",
-    "Kepala daerah yang memimpin jalannya pemerintahan di Kabupaten Pangandaran.": "Regional head leading the government in Pangandaran Regency.",
-    "Pasar tradisional utama tempat warga lokal dan turis mencari kebutuhan pokok harian.": "Main traditional market where locals and tourists look for daily basic needs.",
-    "Tempat nelayan membongkar dan melelang tangkapan hasil laut segar di Pantai Timur.": "Place where fishermen unload and auction fresh seafood catches at East Beach.",
-    
-    // TERJEMAHAN KATA EKSTRA (INGGRIS)
-    "Minuman berkafein pekat yang diseduh tanpa gula atau susu.": "Strong caffeinated drink brewed without sugar or milk.",
-    "Minuman seduhan daun teh yang ditambahkan gula agar terasa manis.": "Steeped tea leaf drink added with sugar to make it sweet.",
-    "Alat musik berdawai yang dipetik atau digenjreng.": "Stringed musical instrument that is plucked or strummed.",
-    "Alat musik berdawai yang dimainkan dengan cara digesek.": "Stringed musical instrument played by bowing.",
-    "Hewan peliharaan berbulu yang suka mengeong dan menangkap tikus.": "Furry pet that likes to meow and catch mice.",
-    "Hewan peliharaan yang setia, menggonggong, dan suka menjaga rumah.": "Loyal pet that barks and likes to guard the house.",
-    "Kendaraan beroda dua yang digerakkan oleh mesin.": "Two-wheeled vehicle powered by an engine.",
-    "Kendaraan beroda dua klasik yang digerakkan dengan cara dikayuh.": "Classic two-wheeled vehicle propelled by pedaling.",
-    "Nasi yang digoreng dengan bumbu kecap, bawang, dan aneka isian.": "Fried rice with soy sauce, onions, and various fillings.",
-    "Mie yang dimasak kering dengan bumbu gurih manis.": "Noodles cooked dry with sweet savory seasoning.",
-    "Kumpulan kertas kosong yang dijilid untuk mencatat sesuatu.": "A collection of bound blank papers for noting things down.",
-    "Buku referensi yang berisi daftar kata beserta arti dan pelafalannya.": "Reference book containing a list of words along with their meanings and pronunciations.",
-    "Kendaraan udara yang memiliki sayap dan mesin pendorong untuk terbang.": "Air vehicle that has wings and thrust engines to fly.",
-    "Kendaraan udara dengan baling-baling besar di bagian atasnya.": "Air vehicle with large rotors on top of it.",
-    "Alas kaki kasual bersol karet yang nyaman dipakai sehari-hari.": "Casual rubber-soled footwear that is comfortable for daily wear.",
-    "Alas kaki santai dengan tali penahan berbentuk huruf Y.": "Relaxing footwear with Y-shaped holding straps.",
-    "Alat elektronik berbaling-baling untuk menghasilkan angin.": "Electronic device with blades to produce wind.",
-    "Mesin pendingin ruangan yang mengatur suhu dan kelembapan.": "Room cooling machine that regulates temperature and humidity.",
-    "Alat penunjuk waktu yang dipakai melingkar di pergelangan tangan.": "Timepiece worn circling the wrist.",
-    "Alat penunjuk waktu berukuran besar yang dipasang di tembok.": "Large timepiece mounted on the wall.",
-    "Alat bantu penglihatan yang terdiri dari lensa dan bingkai.": "Vision aid consisting of lenses and a frame.",
-    "Lensa tipis yang dipasang langsung menempel pada kornea mata.": "Thin lens attached directly to the cornea of the eye.",
-    "Alat tajam bergagang yang digunakan untuk memotong bahan makanan.": "Handled sharp tool used to cut food ingredients.",
-    "Alat pemotong dengan dua bilah pisau yang berporos di tengah.": "Cutting tool with two blades pivoted in the middle.",
-    "Pelindung kepala dari panas matahari yang memiliki lidah di bagian depan.": "Head protector from sun heat that has a visor at the front.",
-    "Pelindung kepala keras yang wajib dipakai saat mengendarai motor.": "Hard head protector that must be worn when riding a motorcycle.",
-    "Pembersih tubuh berbentuk padat atau cair yang menghasilkan busa.": "Solid or liquid body cleanser that produces foam.",
-    "Cairan khusus untuk mencuci dan membersihkan rambut serta kulit kepala.": "Special liquid for washing and cleaning hair and scalp.",
-    "Alat berbulu kecil untuk membersihkan sela-sela gigi.": "Small bristled tool for cleaning between teeth.",
-    "Krim atau gel pembersih yang dioleskan pada sikat gigi.": "Cleansing cream or gel applied to a toothbrush.",
-    "Alat lipat bertangkai untuk melindungi diri dari hujan atau panas.": "Foldable handled tool to protect from rain or heat.",
-    "Pakaian tahan air yang menutupi tubuh agar tidak basah saat hujan.": "Waterproof clothing covering the body so it won't get wet in the rain.",
-    "Perabot rumah tangga bertingkat untuk menyimpan baju.": "Tiered household furniture for storing clothes.",
-    "Perabot rumah tangga tanpa pintu untuk memajang buku-buku.": "Doorless household furniture for displaying books.",
-    "Alat elektronik berbentuk layar untuk menonton siaran gambar dan suara.": "Screen-shaped electronic device for watching picture and sound broadcasts.",
-    "Alat elektronik yang hanya mengeluarkan siaran berupa suara.": "Electronic device that only emits audio broadcasts.",
-    "Alat tulis berinti grafit yang hasilnya bisa dihapus dengan karet penghapus.": "Graphite-cored writing tool whose results can be erased with a rubber eraser.",
-    "Alat tulis yang menggunakan tinta cair untuk menulis.": "Writing tool that uses liquid ink to write.",
-    "Wadah berbentuk tabung silinder yang biasa digunakan untuk minum.": "Cylindrical tube-shaped container commonly used for drinking.",
-    "Wadah minum kecil yang memiliki pegangan di salah satu sisinya.": "Small drinking container that has a handle on one of its sides.",
-    "Wadah ceper berbentuk bundar untuk meletakkan makanan.": "Round flat container for placing food.",
-    "Wadah cekung dan dalam, biasanya digunakan untuk makanan berkuah.": "Deep concave container, usually used for soupy food.",
-    "Mesin pendingin penyimpan makanan agar awet dan tidak cepat busuk.": "Cooling machine for storing food so it lasts and doesn't rot quickly.",
-    "Alat pemanas tertutup untuk memanggang atau membakar makanan.": "Closed heating appliance for baking or roasting food.",
-    "Kain lebar berbahan tebal untuk menghangatkan tubuh saat tidur.": "Wide thick fabric cloth to warm the body while sleeping.",
-    "Kain tipis pelapis kasur atau alas tempat tidur.": "Thin fabric covering the mattress or bed base.",
-    "Perabot berkaki dengan permukaan datar untuk alas bekerja atau makan.": "Legged furniture with a flat surface for working or eating.",
-    "Perabot rumah tangga yang difungsikan sebagai tempat duduk.": "Household furniture that functions as a seat.",
-    "Alat logam berlekuk untuk membuka atau menutup gembok.": "Notched metal tool to open or close a padlock.",
-    "Alat pengaman berbahan besi yang harus dibuka dengan kuncinya.": "Iron safety device that must be opened with its key.",
-    "Jalur keluar masuk pada sebuah ruangan yang bisa dibuka tutup.": "Entrance and exit path in a room that can be opened and closed.",
-    "Lubang ventilasi udara dan cahaya pada dinding rumah.": "Air and light ventilation hole in the house wall.",
-    "Bintang pusat tata surya yang memancarkan cahaya dan panas di siang hari.": "Central star of the solar system emitting light and heat during the day.",
-    "Satelit alami bumi yang bersinar terang memantulkan cahaya di malam hari.": "Earth's natural satellite shining brightly reflecting light at night.",
-    "Bumbu dapur berbentuk kristal putih yang memberikan rasa asin.": "White crystal shaped kitchen spice that gives a salty taste.",
-    "Bumbu pemanis berbahan dasar tebu yang sering dicampur dalam minuman.": "Sugarcane-based sweetening spice often mixed into drinks.",
-    "Permukaan bumi yang menjulang tinggi, ukurannya lebih besar dari bukit.": "Towering earth surface, larger in size than a hill.",
-    "Dataran rendah yang letaknya berada di antara perbukitan atau pegunungan.": "Lowland located between hills or mountains.",
-    "Aliran air tawar memanjang secara alami dari hulu hingga bermuara di laut.": "Natural elongated fresh water flow from upstream to emptying into the sea.",
-    "Cekungan besar di daratan yang digenangi oleh air tawar secara alami.": "Large basin on land naturally inundated by fresh water.",
-    "Lembaran tipis berbahan serat kayu yang digunakan untuk media menulis.": "Thin sheet made of wood fiber used for writing media.",
-    "Bahan berserat kayu yang ukurannya lebih tebal dan kaku dari kertas biasa.": "Wood fiber material that is thicker and stiffer than regular paper.",
-    "Wadah pembawa barang yang dipakai dengan cara digendong di punggung.": "Goods carrying container worn by carrying on the back.",
-    "Wadah besar berbentuk kotak bersleting, biasanya memiliki roda untuk bepergian.": "Large zippered box-shaped container, usually has wheels for traveling.",
-    "Kendaraan darat roda empat yang memiliki mesin dan kabin penumpang.": "Four-wheeled land vehicle having an engine and passenger cabin.",
-    "Kendaraan darat besar beroda banyak untuk mengangkut banyak penumpang sekaligus.": "Large multi-wheeled land vehicle to transport many passengers at once.",
-    "Rangkaian gerbong yang berjalan di atas rel besi.": "A series of wagons running on iron rails.",
-    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Large motorized vehicle specially designed to transport heavy goods.",
-    "Biji-bijian putih hasil gilingan padi yang merupakan makanan pokok orang Indonesia.": "White grains from milled rice which is the staple food of Indonesians.",
-    "Biji-bijian yang diolah menjadi tepung terigu sebagai bahan utama pembuat roti.": "Grains processed into wheat flour as the main ingredient for making bread.",
-    "Kucing besar yang dikenal sebagai raja hutan dengan surai lebat di lehernya.": "Big cat known as the king of the jungle with a thick mane on its neck.",
-    "Kucing buas berukuran besar yang memiliki corak belang-belang.": "Large wild cat with striped patterns.",
-    "Mamalia berkaki empat yang pandai berlari dan sering dijadikan hewan tunggangan.": "Four-legged mammal good at running and often used as a riding animal.",
-    "Mamalia berkaki empat ternak penghasil daging dan susu murni.": "Four-legged farm mammal producing meat and pure milk.",
-    "Primata berukuran kecil hingga sedang yang pandai memanjat dan memiliki ekor.": "Small to medium sized primate good at climbing and has a tail.",
-    "Kera besar berbulu kemerahan asal Kalimantan dan Sumatera yang tidak berekor.": "Reddish hairy great ape from Kalimantan and Sumatra with no tail.",
-    "Komputer jinjing portabel yang bisa dilipat dan dibawa kemana-mana.": "Portable laptop computer that can be folded and carried anywhere.",
-    "Perangkat pintar berlayar sentuh lebar tanpa keyboard fisik bawaan.": "Smart device with a wide touchscreen without a built-in physical keyboard.",
-    "Telepon genggam pintar yang memiliki fungsi menyerupai komputer mini.": "Smart mobile phone having functions resembling a mini computer.",
-    "Alat komunikasi suara yang tersambung kabel dan tidak bisa dibawa-bawa.": "Wired voice communication device that cannot be carried around.",
-    "Pakaian santai tanpa kerah dan kancing, sering disebut T-shirt.": "Casual clothing without a collar and buttons, often called a T-shirt.",
-    "Pakaian formal atau semi formal berkerah yang memiliki deretan kancing di depan.": "Formal or semi-formal collared clothing having a row of buttons on the front.",
-    "Pakaian penutup bagian bawah tubuh yang menutupi kaki hingga mata kaki.": "Clothing covering the lower body that covers the legs down to the ankles.",
-    "Pakaian bawahan santai yang ukurannya hanya selutut atau di atas lutut.": "Casual bottom clothing whose size is only knee-length or above the knee.",
-    "Benda elektronik bercahaya untuk menerangi ruangan yang gelap.": "Glowing electronic object to illuminate a dark room.",
-    "Sumber penerangan tradisional berupa batang parafin bersumbu yang dibakar.": "Traditional light source in the form of a wicked paraffin stick that is burned.",
     "Alas tebal dan empuk berukuran besar untuk berbaring atau tidur.": "Thick and soft large sized base for lying down or sleeping.",
     "Alas kepala berukuran kecil yang empuk, sangat nyaman dipakai tidur.": "Small soft headrest, very comfortable for sleeping.",
     "Bumbu umbi lapis yang wajib ada untuk menumis berbagai masakan Nusantara.": "Layered bulb spice that must be present for stir-frying various Indonesian dishes.",
@@ -499,9 +352,9 @@ const EXACT_TRANSLATIONS = {
     "Alat pernapasan dan indra penciuman yang menonjol di tengah wajah.": "Breathing apparatus and sense of smell protruding in the middle of the face.",
     "Organ pendengaran yang letaknya berada di sisi kiri dan kanan kepala.": "Hearing organ located on the left and right sides of the head.",
     "Organ pemompa darah yang terus berdetak di dalam rongga dada.": "Blood pumping organ that continues to beat inside the chest cavity.",
-    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Spongy respiratory organ in the chest where oxygen and carbon dioxide exchange.",
-    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Building to live and settle to take shelter from rain and heat.",
-    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Portable fabric shelter commonly used for camping in the wild."
+    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Organ rénghap spons di dada tempat bursa oksigén jeung karbon dioksida.",
+    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Wangunan tempat cicing sarta netep pikeun ngiuhan tina hujan jeung panas.",
+    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Tempat ngiuhan portabel tina lawon nu biasa dipaké kémping di alam bébas."
   }
 };
 
@@ -571,6 +424,11 @@ export default function App() {
   const speakerAnim = useRef(new Animated.Value(0)).current;
   const [isTakingPhoto, setIsTakingPhoto] = useState(false);
 
+  // --- STATE UPDATE OTOMATIS ---
+  const [isUpdating, setIsUpdating] = useState(false);
+  const [updateProgress, setUpdateProgress] = useState(0);
+  const progressAnim = useRef(new Animated.Value(0)).current;
+
   // --- AUDIO SETUP ---
   const [bgmSound, setBgmSound] = useState(null);
   
@@ -579,7 +437,7 @@ export default function App() {
       try {
         await Audio.setAudioModeAsync({
           playsInSilentModeIOS: true,
-          staysActiveInBackground: false, // <-- DIUBAH AGAR MUTE SAAT BACKGROUND
+          staysActiveInBackground: false, 
           shouldDuckAndroid: true,
           playThroughEarpieceAndroid: false,
         });
@@ -592,7 +450,7 @@ export default function App() {
     return () => { if (bgmSound) bgmSound.unloadAsync(); }
   }, []);
 
-  // --- CEK UPDATE OTOMATIS (OTA) ---
+  // --- CEK UPDATE OTOMATIS (OTA) DENGAN LOADING BAR ---
   useEffect(() => {
     async function checkUpdates() {
       try {
@@ -600,11 +458,37 @@ export default function App() {
         if (update.isAvailable) {
           setCustomAlert({
             title: "UPDATE TERSEDIA",
-            message: "Versi terbaru Kecap Sumput telah tersedia. Aplikasi akan dimuat ulang untuk memperbarui fitur.",
-            btnText: "UPDATE SEKARANG",
+            message: "Versi terbaru Kecap Sumput telah siap. Kami akan mengunduh dan memuat ulang aplikasi.",
+            btnText: "UNDUH SEKARANG",
             onConfirm: async () => {
+              setCustomAlert(null);
+              setIsUpdating(true);
+
+              // Mulai animasi loading dari 0 ke 90 selama 15 detik (estimasi)
+              Animated.timing(progressAnim, {
+                toValue: 90,
+                duration: 15000,
+                useNativeDriver: false,
+              }).start();
+
+              progressAnim.addListener(({ value }) => {
+                setUpdateProgress(Math.floor(value));
+              });
+
+              // Proses unduh asli di belakang layar
               await Updates.fetchUpdateAsync();
-              await Updates.reloadAsync();
+              
+              // Jika unduhan selesai, paksa animasi ke 100% dengan cepat
+              Animated.timing(progressAnim, {
+                toValue: 100,
+                duration: 500,
+                useNativeDriver: false,
+              }).start(async () => {
+                setUpdateProgress(100);
+                setTimeout(async () => {
+                  await Updates.reloadAsync();
+                }, 800);
+              });
             }
           });
         }
@@ -615,6 +499,10 @@ export default function App() {
     if (!__DEV__) {
       checkUpdates();
     }
+
+    return () => {
+      progressAnim.removeAllListeners();
+    };
   }, []);
 
   const playSFX = async (type) => {
@@ -1214,6 +1102,26 @@ export default function App() {
               <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#2ECC71'}]} onPress={() => { playSFX('click'); customAlert.onConfirm(); setCustomAlert(null); }}>
                 <Text style={styles.btnPrimaryText}>{customAlert.btnText || 'OK'}</Text>
               </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+      )}
+
+      {/* MODAL UPDATE PROGRESS */}
+      {isUpdating && (
+        <Modal transparent visible animationType="fade">
+          <View style={styles.modalOverlayList}>
+            <View style={[styles.cardBase, {width: '85%', alignItems: 'center', borderColor: '#3498DB'}]}>
+              <Ionicons name="cloud-download" size={60} color="#3498DB" />
+              <Text style={[styles.headerText, {color: '#3498DB', fontSize: 24, marginTop: 10}]}>MENGUNDUH...</Text>
+              <View style={styles.line} />
+              
+              <View style={{width: '100%', height: 20, backgroundColor: '#ECF0F1', borderRadius: 10, overflow: 'hidden', marginVertical: 15}}>
+                <Animated.View style={{width: progressAnim.interpolate({inputRange: [0, 100], outputRange: ['0%', '100%']}), height: '100%', backgroundColor: '#2ECC71'}} />
+              </View>
+              
+              <Text style={[styles.hugeText, {color: '#2C3E50', fontSize: 36, marginVertical: 0}]}>{updateProgress}%</Text>
+              <Text style={[styles.infoSectionText, {textAlign: 'center', marginTop: 10}]}>Mohon tunggu dan jangan tutup aplikasi ini.</Text>
             </View>
           </View>
         </Modal>
