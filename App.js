@@ -721,7 +721,7 @@ export default function App() {
   const [winnerLog, setWinnerLog] = useState("");
   const [mrWhiteGuess, setMrWhiteGuess] = useState("");
   const [turnCounter, setTurnCounter] = useState(1); 
-  const [isFlipped, setIsFlipped] = useState(false); // <--- TAMBAHAN BARU
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const shakeAnim = useRef(new Animated.Value(0)).current;
@@ -733,18 +733,14 @@ export default function App() {
 
   const flipCardToBack = () => { 
     playSFX('flip');
+    setIsFlipped(true);
     Animated.spring(flipAnim, { toValue: 180, friction: 8, tension: 10, useNativeDriver: true }).start(); 
   };
-  const flipCardToFrontAndProceed = (callback) => { 
-    const flipCardToBack = () => { 
-    playSFX('flip');
-    setIsFlipped(true); // <--- TAMBAHAN BARU
-    Animated.spring(flipAnim, { toValue: 180, friction: 8, tension: 10, useNativeDriver: true }).start(); 
-  };
+
   const flipCardToFrontAndProceed = (callback) => { 
     playSFX('click');
     Animated.timing(flipAnim, { toValue: 0, duration: 250, useNativeDriver: true }).start(() => { 
-      setIsFlipped(false); // <--- TAMBAHAN BARU
+      setIsFlipped(false); 
       callback(); 
     }); 
   };
@@ -1086,7 +1082,6 @@ export default function App() {
       </View>
     );
   }
-}
 
   // --- RENDER SCREENS UTAMA ---
   return (
