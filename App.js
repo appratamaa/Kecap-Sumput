@@ -71,16 +71,22 @@ const DICTIONARY = {
     INFO_ROLE_TITLE: "PERAN PEMAIN",
     INFO_ROLE_DESC1: "Marlin: Apal kecap aslina.",
     INFO_ROLE_DESC2: "Banteng: Kénging kecap nu mirip, kudu nyaru.",
-    INFO_ROLE_DESC3: "Lutung: Teu apal kecap pisan, kudu nebak di akhir.",
+    INFO_ROLE_DESC3: "Lutung: Mun nyésa 1 Marlin, Lutung otomatis meunang! Mun nyésa Banteng, tebak kecap Banteng.",
     INFO_ROUND_TITLE: "PUTARAN & RONDE",
     INFO_ROUND_DESC: "1 Putaran réngsé sanggeus kabéh pamaén méré pituduh terus VOTE. Kaulinan maju nepi ka aya tim nu meunang (1 Ronde).",
     INFO_SCORE_TITLE: "POIN SKOR",
-    INFO_SCORE_DESC: "Meunang = +10 Poin\nSalamet ti Vote = +5 Poin\nKaéleminasi = -20 (Vote mimiti) / -10 (Vote saterusna).",
+    INFO_SCORE_DESC: "Marlin / Banteng Meunang = +10 Poin\nLutung Meunang = +50 Poin\nSalamet ti Vote = +5 Poin\nKaéleminasi = -20 (Mimiti) / -10 (Saterusna).",
     UNDERSTAND: "KURING NGAHARTI",
     ALERT_CLAIM_FAIL_TITLE: "GAGAL VERIFIKASI",
     ALERT_CLAIM_FAIL_MSG: "Sistem ngadeteksi anjeun teu acan follow atanapi langsung unfollow. Mangga cobian deui sing leres!",
     ALERT_CLAIM_SUCCESS_TITLE: "BERHASIL!",
-    ALERT_CLAIM_SUCCESS_MSG: "Hatur nuhun tos follow! 50 kecap ékstra tos kabuka permanén dina alat ieu."
+    ALERT_CLAIM_SUCCESS_MSG: "Hatur nuhun tos follow! 50 kecap ékstra tos kabuka permanén dina alat ieu.",
+    SETTINGS: "PENGATURAN",
+    BGM: "Musik Latar",
+    SFX: "Éfék Sora",
+    VOL: "Volume",
+    CAM_PERM: "Izin Kaméra",
+    CLOSE: "TUTUP"
   },
   Indonesia: {
     GAME_SUB: "Edisi Pangandaran",
@@ -133,16 +139,22 @@ const DICTIONARY = {
     INFO_ROLE_TITLE: "PERAN PEMAIN",
     INFO_ROLE_DESC1: "Marlin: Tahu kata aslinya.",
     INFO_ROLE_DESC2: "Banteng: Mendapat kata yang mirip, harus berbaur.",
-    INFO_ROLE_DESC3: "Lutung: Tidak tahu kata sama sekali, harus menebak di akhir.",
+    INFO_ROLE_DESC3: "Lutung: Jika sisa 1 Marlin, Lutung otomatis menang! Jika sisa Banteng, tebak kata Banteng.",
     INFO_ROUND_TITLE: "PUTARAN & RONDE",
     INFO_ROUND_DESC: "1 Putaran selesai setelah semua pemain menyebutkan petunjuk lalu melakukan VOTE. Permainan berlanjut hingga salah satu tim menang (1 Ronde).",
     INFO_SCORE_TITLE: "POIN SKOR",
-    INFO_SCORE_DESC: "Menang = +10 Poin\nBertahan dari Vote = +5 Poin\nTereliminasi = -20 (Vote pertama) / -10 (Vote lanjut).",
+    INFO_SCORE_DESC: "Marlin atau Banteng Menang = +10 Poin\nLutung Menang Tebakan = +50 Poin\nBertahan dari Vote = +5 Poin\nTereliminasi = -20 (Vote pertama) / -10 (Lanjut).",
     UNDERSTAND: "SAYA MENGERTI",
     ALERT_CLAIM_FAIL_TITLE: "GAGAL VERIFIKASI",
     ALERT_CLAIM_FAIL_MSG: "Sistem mendeteksi kamu belum mem-follow atau langsung unfollow. Silakan coba lagi dengan benar!",
     ALERT_CLAIM_SUCCESS_TITLE: "BERHASIL!",
-    ALERT_CLAIM_SUCCESS_MSG: "Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini."
+    ALERT_CLAIM_SUCCESS_MSG: "Terima kasih telah follow! 50 kata ekstra telah terbuka permanen di perangkat ini.",
+    SETTINGS: "PENGATURAN",
+    BGM: "Musik Latar",
+    SFX: "Efek Suara",
+    VOL: "Volume",
+    CAM_PERM: "Izin Kamera",
+    CLOSE: "TUTUP"
   },
   Inggris: {
     GAME_SUB: "Pangandaran Edition",
@@ -195,16 +207,22 @@ const DICTIONARY = {
     INFO_ROLE_TITLE: "PLAYER ROLES",
     INFO_ROLE_DESC1: "Marlin: Knows the original word.",
     INFO_ROLE_DESC2: "Banteng: Gets a similar word, must blend in.",
-    INFO_ROLE_DESC3: "Lutung: Doesn't know the word at all, must guess at the end.",
+    INFO_ROLE_DESC3: "Lutung: Auto-wins if 1 Marlin is left! Must guess Banteng's word if facing Banteng.",
     INFO_ROUND_TITLE: "TURNS & ROUNDS",
     INFO_ROUND_DESC: "1 Turn is completed after all players give a hint and then VOTE. The game continues until one team wins (1 Round).",
     INFO_SCORE_TITLE: "SCORE POINTS",
-    INFO_SCORE_DESC: "Win = +10 Points\nSurvive Vote = +5 Points\nEliminated = -20 (First vote) / -10 (Subsequent votes).",
+    INFO_SCORE_DESC: "Marlin or Banteng Win = +10 Points\nLutung Guesses Correctly = +50 Points\nSurvive Vote = +5 Points\nEliminated = -20 (First vote) / -10 (Subsequent).",
     UNDERSTAND: "I UNDERSTAND",
     ALERT_CLAIM_FAIL_TITLE: "VERIFICATION FAILED",
     ALERT_CLAIM_FAIL_MSG: "The system detected that you haven't followed or immediately unfollowed. Please try again properly!",
     ALERT_CLAIM_SUCCESS_TITLE: "SUCCESS!",
-    ALERT_CLAIM_SUCCESS_MSG: "Thank you for following! 50 extra words have been permanently unlocked."
+    ALERT_CLAIM_SUCCESS_MSG: "Thank you for following! 50 extra words have been permanently unlocked.",
+    SETTINGS: "SETTINGS",
+    BGM: "Background Music",
+    SFX: "Sound Effects",
+    VOL: "Volume",
+    CAM_PERM: "Camera Permission",
+    CLOSE: "CLOSE"
   }
 };
 
@@ -322,7 +340,7 @@ const EXACT_TRANSLATIONS = {
     "Kendaraan darat roda empat yang memiliki mesin dan kabin penumpang.": "Kandaraan darat roda opat nu boga mesin jeung kabin panumpang.",
     "Kendaraan darat besar beroda banyak untuk mengangkut banyak penumpang sekaligus.": "Kandaraan darat badag roda loba pikeun ngangkut panumpang sakaligus.",
     "Rangkaian gerbong yang berjalan di atas rel besi.": "Runtuyan gerbong nu leumpang di luhur rél beusi.",
-    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Large motorized vehicle specially designed to transport heavy goods.",
+    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Kandaraan bermotor badag nu didésain husus pikeun ngangkut barang beurat.",
     "Biji-bijian putih hasil gilingan padi yang merupakan makanan pokok orang Indonesia.": "Siki-sikian bodas hasil gilingan paré nu mangrupa kadaharan poko urang Indonésia.",
     "Biji-bijian yang diolah menjadi tepung terigu sebagai bahan utama pembuat roti.": "Siki-sikian nu diolah jadi tipung tarigu salaku bahan utama nyieun roti.",
     "Kucing besar yang dikenal sebagai raja hutan dengan surai lebat di lehernya.": "Ucing badag nu dipikawanoh salaku raja leuweung nu bulu kandel di beuheungna.",
@@ -341,6 +359,153 @@ const EXACT_TRANSLATIONS = {
     "Pakaian bawahan santai yang ukurannya hanya selutut atau di atas lutut.": "Papakéan bawahan santéy nu ukuranna ngan saukur tuur atawa luhureun tuur.",
     "Benda elektronik bercahaya untuk menerangi ruangan yang gelap.": "Barang éléktronik caang pikeun nyaangan rohangan nu poék.",
     "Sumber penerangan tradisional berupa batang parafin bersumbu yang dibakar.": "Sumber panerangan tradisional mangrupa watang parafin sumbuan nu diduruk.",
+    "Alas tebal dan empuk berukuran besar untuk berbaring atau tidur.": "Alas kandel sarta hipu ukuran badag pikeun ngagolér atawa saré.",
+    "Alas kepala berukuran kecil yang empuk, sangat nyaman dipakai tidur.": "Alas sirah ukuran leutik nu hipu, pohara merenah dipaké saré.",
+    "Bumbu umbi lapis yang wajib ada untuk menumis berbagai masakan Nusantara.": "Bumbu beuti lapis nu wajib aya pikeun ngagoréng bumbu asakan Nusantara.",
+    "Bumbu dapur beraroma tajam bersiung-siung yang umum untuk bumbu dasar.": "Bumbu pawon seungit seukeut mangsiung-siung nu ilahar jadi bumbu dasar.",
+    "Bumbu cair kental berwarna hitam legam yang terbuat dari kedelai dan gula aren.": "Bumbu éncér kandel warna hideung lestreng tina kadelé jeung gula kawung.",
+    "Bumbu cair berwarna merah kental dengan cita rasa pedas dan sedikit asam.": "Bumbu éncér warna beureum kandel mibanda rasa lada sarta rada haseum.",
+    "Struktur putih dan keras di dalam mulut untuk mengunyah makanan.": "Wangunan bodas sarta teuas di jero sungut pikeun nyapek kadaharan.",
+    "Otot fleksibel di dalam mulut yang berfungsi sebagai indra pengecap rasa.": "Otot fléksibel di jero sungut nu fungsina minangka indra pangrasa.",
+    "Alat pernapasan dan indra penciuman yang menonjol di tengah wajah.": "Alat rénghap jeung indra pangambeu nu nonjol di tengah beungeut.",
+    "Organ pendengaran yang letaknya berada di sisi kiri dan kanan kepala.": "Organ pangrungu nu perenahna di gigir kénca jeung katuhu sirah.",
+    "Organ pemompa darah yang terus berdetak di dalam rongga dada.": "Organ ngompa getih nu tuluy ratug di jero rongga dada.",
+    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Organ rénghap spons di dada tempat bursa oksigén jeung karbon dioksida.",
+    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Wangunan tempat cicing sarta netep pikeun ngiuhan tina hujan jeung panas.",
+    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Tempat ngiuhan portabel tina lawon nu biasa dipaké kémping di alam bébas."
+  },
+  Inggris: {
+    "Pantai Barat": "West Beach", "Pantai Timur": "East Beach", "Gunung": "Mountain", "Banteng": "Wild Bull", "Rusa": "Deer",
+    "Gua Jepang": "Japanese Cave", "Es Kelapa Muda": "Young Coconut Ice", "Kopi Hitam": "Black Coffee", "Teh Manis": "Sweet Tea",
+    "Sepeda Motor": "Motorcycle", "Rumah": "House", "Garam": "Salt", "Kucing": "Cat", "Anjing": "Dog", "Matahari": "Sun",
+    "Spot utama melihat sunset, ombaknya bersahabat untuk berenang dan surfing.": "Main spot to watch the sunset, friendly waves for swimming and surfing.",
+    "Surganya kuliner seafood dan tempat terbaik berburu sunrise di pagi buta.": "Seafood culinary paradise and the best place to hunt for sunrise at dawn.",
+    "Sungai bening dengan aktivitas Body Rafting menembus gua dan pepohonan rimbun.": "Clear river with Body Rafting activities through caves and lush trees.",
+    "Dikenal sebagai Cukang Taneuh, wisata perahu menyusuri tebing eksotis bak kanyon Amerika.": "Known as Cukang Taneuh, a boat tour along exotic cliffs like an American canyon.",
+    "Pantai eksotis dengan pulau-pulau karang kecil, sangat cocok untuk kemping.": "Exotic beach with small coral islands, very suitable for camping.",
+    "Pantai dengan ombak panjang yang menjadi favorit para peselancar lokal maupun dunia.": "Beach with long waves that is a favorite of local and world surfers.",
+    "Bukit karang dengan pemandangan laut lepas, konon ada batu berbentuk sirip hiu.": "Coral hill with open sea views, word has it there is a shark fin shaped rock.",
+    "Kawasan perhutani dengan legenda cinta sejati nenek (nini) yang menunggu kakeknya.": "Forestry area with the true love legend of a grandmother (nini) waiting for her grandfather.",
+    "Sup ikan khas Pangandaran berkuah kuning segar dengan paduan kecombrang (honje).": "Pangandaran typical fish soup with fresh yellow broth mixed with torch ginger.",
+    "Ikan asin primadona oleh-oleh Pangandaran, dagingnya tebal dan empuk seperti roti saat digoreng.": "The prime salted fish souvenir of Pangandaran, thick and soft meat like bread when fried.",
+    "Hutan konservasi di semenanjung Pangandaran yang dipenuhi monyet, rusa, dan gua bersejarah.": "Conservation forest in the Pangandaran peninsula filled with monkeys, deer, and historical caves.",
+    "Area pantai bersih tanpa karang, tempat bersandar bangkai kapal menteri Susi.": "Clean beach area without corals, the resting place of Minister Susi's shipwreck.",
+    "Warung sate legendaris di Pangandaran yang sudah berdiri puluhan tahun.": "Legendary satay stall in Pangandaran that has been standing for decades.",
+    "Sate ayam dengan bumbu kacang kental yang umum ditemui di berbagai daerah.": "Chicken satay with thick peanut sauce commonly found in various regions.",
+    "Gua pertahanan yang digali paksa pada masa penjajahan Dai Nippon.": "Defense cave forcibly dug during the Dai Nippon occupation.",
+    "Gua dengan stalaktit indah dan konon dulunya adalah keraton keraton Prabu Anggalarang.": "Cave with beautiful stalactites and supposedly used to be the palace of King Anggalarang.",
+    "Minuman segar dari bunga kecombrang yang berkhasiat menurunkan kolesterol.": "Fresh drink from torch ginger flower that helps lower cholesterol.",
+    "Minuman wajib pesisir pantai yang langsung diseruput dari batoknya.": "Must-have coastal drink directly sipped from its shell.",
+    "Singkong fermentasi khas Sunda dengan rasa manis legit dan sedikit asam.": "Sundanese typical fermented cassava with a sweet and slightly sour taste.",
+    "Sajian fermentasi serupa peuyeum, namun biasanya lebih lembek dan berair.": "Fermented dish similar to peuyeum, but usually softer and watery.",
+    "Aquarium raksasa indoor di Pangandaran yang menampilkan biota laut Indonesia.": "Giant indoor aquarium in Pangandaran displaying Indonesian marine biota.",
+    "Wisata edukasi di Pangandaran untuk mengenal berbagai jenis nyamuk dan risetnya.": "Educational tour in Pangandaran to get to know various types of mosquitoes and their research.",
+    "Maskapai penerbangan perintis milik Susi Pudjiastuti, tokoh asli Pangandaran.": "Pioneer airline owned by Susi Pudjiastuti, a native figure of Pangandaran.",
+    "Bandar udara yang berlokasi di Cijulang, melayani rute perintis ke Pangandaran.": "Airport located in Cijulang, serving pioneer routes to Pangandaran.",
+    "Mitos penguasa laut selatan yang erat kaitannya dengan pantangan memakai baju hijau.": "Myth of the southern sea ruler closely related to the taboo of wearing green clothes.",
+    "Warna pakaian yang menjadi mitos larangan saat berkunjung ke pantai selatan.": "Clothing color that becomes a prohibited myth when visiting the southern beach.",
+    "Hewan liar dilindungi yang sesekali bisa terlihat di kawasan Cagar Alam Pananjung.": "Protected wild animals that can occasionally be seen in the Pananjung Nature Reserve area.",
+    "Mamalia jinak yang berkeliaran bebas menyapa wisatawan di sekitar Cagar Alam.": "Tame mammals roaming freely greeting tourists around the Nature Reserve.",
+    "Bunga langka padma yang sesekali mekar di dalam Cagar Alam Pangandaran.": "Rare padma flower that occasionally blooms inside the Pangandaran Nature Reserve.",
+    "Bunga berbau busuk (Amorphophallus) yang bentuknya menjulang tinggi ke atas.": "Foul-smelling flower (Amorphophallus) that towers high upwards.",
+    "Kendaraan hias dengan musik keras, favorit wisatawan untuk keliling Pangandaran malam hari.": "Decorated vehicle with loud music, tourists' favorite for touring Pangandaran at night.",
+    "Sepeda panjang berboncengan yang banyak disewakan di pinggir Pantai Barat.": "Long tandem bicycles widely rented on the edge of West Beach.",
+    "Olahraga berselancar menunggangi ombak, sangat populer di Pantai Batu Karas.": "Surfing sport riding the waves, very popular at Batu Karas Beach.",
+    "Menyusuri arus sungai menggunakan pelampung badan, populer di Citumang & Green Canyon.": "Tracing river currents using body floats, popular in Citumang & Green Canyon.",
+    "Ruang publik megah di Pamugaran dengan menara pandang untuk rekreasi warga.": "Magnificent public space in Pamugaran with a viewing tower for citizen recreation.",
+    "Deretan resto dan cafe estetik pinggir pantai bergaya bambu layaknya Jimbaran Bali.": "A row of aesthetic beachfront restaurants and cafes in bamboo style like Jimbaran Bali.",
+    "Ikon patung ikan Blue Marlin yang sedang melompat, lambang Kabupaten Pangandaran.": "The icon of the jumping Blue Marlin fish statue, symbol of Pangandaran Regency.",
+    "Kepala daerah yang memimpin jalannya pemerintahan di Kabupaten Pangandaran.": "Regional head leading the government in Pangandaran Regency.",
+    "Pasar tradisional utama tempat warga lokal dan turis mencari kebutuhan pokok harian.": "Main traditional market where locals and tourists look for daily basic needs.",
+    "Tempat nelayan membongkar dan melelang tangkapan hasil laut segar di Pantai Timur.": "Place where fishermen unload and auction fresh seafood catches at East Beach.",
+    
+    // TERJEMAHAN KATA EKSTRA (INGGRIS)
+    "Minuman berkafein pekat yang diseduh tanpa gula atau susu.": "Strong caffeinated drink brewed without sugar or milk.",
+    "Minuman seduhan daun teh yang ditambahkan gula agar terasa manis.": "Steeped tea leaf drink added with sugar to make it sweet.",
+    "Alat musik berdawai yang dipetik atau digenjreng.": "Stringed musical instrument that is plucked or strummed.",
+    "Alat musik berdawai yang dimainkan dengan cara digesek.": "Stringed musical instrument played by bowing.",
+    "Hewan peliharaan berbulu yang suka mengeong dan menangkap tikus.": "Furry pet that likes to meow and catch mice.",
+    "Hewan peliharaan yang setia, menggonggong, dan suka menjaga rumah.": "Loyal pet that barks and likes to guard the house.",
+    "Kendaraan beroda dua yang digerakkan oleh mesin.": "Two-wheeled vehicle powered by an engine.",
+    "Kendaraan beroda dua klasik yang digerakkan dengan cara dikayuh.": "Classic two-wheeled vehicle propelled by pedaling.",
+    "Nasi yang digoreng dengan bumbu kecap, bawang, dan aneka isian.": "Fried rice with soy sauce, onions, and various fillings.",
+    "Mie yang dimasak kering dengan bumbu gurih manis.": "Noodles cooked dry with sweet savory seasoning.",
+    "Kumpulan kertas kosong yang dijilid untuk mencatat sesuatu.": "A collection of bound blank papers for noting things down.",
+    "Buku referensi yang berisi daftar kata beserta arti dan pelafalannya.": "Reference book containing a list of words along with their meanings and pronunciations.",
+    "Kendaraan udara yang memiliki sayap dan mesin pendorong untuk terbang.": "Air vehicle that has wings and thrust engines to fly.",
+    "Kendaraan udara dengan baling-baling besar di bagian atasnya.": "Air vehicle with large rotors on top of it.",
+    "Alas kaki kasual bersol karet yang nyaman dipakai sehari-hari.": "Casual rubber-soled footwear that is comfortable for daily wear.",
+    "Alas kaki santai dengan tali penahan berbentuk huruf Y.": "Relaxing footwear with Y-shaped holding straps.",
+    "Alat elektronik berbaling-baling untuk menghasilkan angin.": "Electronic device with blades to produce wind.",
+    "Mesin pendingin ruangan yang mengatur suhu dan kelembapan.": "Room cooling machine that regulates temperature and humidity.",
+    "Alat penunjuk waktu yang dipakai melingkar di pergelangan tangan.": "Timepiece worn circling the wrist.",
+    "Alat penunjuk waktu berukuran besar yang dipasang di tembok.": "Large timepiece mounted on the wall.",
+    "Alat bantu penglihatan yang terdiri dari lensa dan bingkai.": "Vision aid consisting of lenses and a frame.",
+    "Lensa tipis yang dipasang langsung menempel pada kornea mata.": "Thin lens attached directly to the cornea of the eye.",
+    "Alat tajam bergagang yang digunakan untuk memotong bahan makanan.": "Handled sharp tool used to cut food ingredients.",
+    "Alat pemotong dengan dua bilah pisau yang berporos di tengah.": "Cutting tool with two blades pivoted in the middle.",
+    "Pelindung kepala dari panas matahari yang memiliki lidah di bagian depan.": "Head protector from sun heat that has a visor at the front.",
+    "Pelindung kepala keras yang wajib dipakai saat mengendarai motor.": "Hard head protector that must be worn when riding a motorcycle.",
+    "Pembersih tubuh berbentuk padat atau cair yang menghasilkan busa.": "Solid or liquid body cleanser that produces foam.",
+    "Cairan khusus untuk mencuci dan membersihkan rambut serta kulit kepala.": "Special liquid for washing and cleaning hair and scalp.",
+    "Alat berbulu kecil untuk membersihkan sela-sela gigi.": "Small bristled tool for cleaning between teeth.",
+    "Krim atau gel pembersih yang dioleskan pada sikat gigi.": "Cleansing cream or gel applied to a toothbrush.",
+    "Alat lipat bertangkai untuk melindungi diri dari hujan atau panas.": "Foldable handled tool to protect from rain or heat.",
+    "Pakaian tahan air yang menutupi tubuh agar tidak basah saat hujan.": "Waterproof clothing covering the body so it won't get wet in the rain.",
+    "Perabot rumah tangga bertingkat untuk menyimpan baju.": "Tiered household furniture for storing clothes.",
+    "Perabot rumah tangga tanpa pintu untuk memajang buku-buku.": "Doorless household furniture for displaying books.",
+    "Alat elektronik berbentuk layar untuk menonton siaran gambar dan suara.": "Screen-shaped electronic device for watching picture and sound broadcasts.",
+    "Alat elektronik yang hanya mengeluarkan siaran berupa suara.": "Electronic device that only emits audio broadcasts.",
+    "Alat tulis berinti grafit yang hasilnya bisa dihapus dengan karet penghapus.": "Graphite-cored writing tool whose results can be erased with a rubber eraser.",
+    "Alat tulis yang menggunakan tinta cair untuk menulis.": "Writing tool that uses liquid ink to write.",
+    "Wadah berbentuk tabung silinder yang biasa digunakan untuk minum.": "Cylindrical tube-shaped container commonly used for drinking.",
+    "Wadah minum kecil yang memiliki pegangan di salah satu sisinya.": "Small drinking container that has a handle on one of its sides.",
+    "Wadah ceper berbentuk bundar untuk meletakkan makanan.": "Round flat container for placing food.",
+    "Wadah cekung dan dalam, biasanya digunakan untuk makanan berkuah.": "Deep concave container, usually used for soupy food.",
+    "Mesin pendingin penyimpan makanan agar awet dan tidak cepat busuk.": "Cooling machine for storing food so it lasts and doesn't rot quickly.",
+    "Alat pemanas tertutup untuk memanggang atau membakar makanan.": "Closed heating appliance for baking or roasting food.",
+    "Kain lebar berbahan tebal untuk menghangatkan tubuh saat tidur.": "Wide thick fabric cloth to warm the body while sleeping.",
+    "Kain tipis pelapis kasur atau alas tempat tidur.": "Thin fabric covering the mattress or bed base.",
+    "Perabot berkaki dengan permukaan datar untuk alas bekerja atau makan.": "Legged furniture with a flat surface for working or eating.",
+    "Perabot rumah tangga yang difungsikan sebagai tempat duduk.": "Household furniture that functions as a seat.",
+    "Alat logam berlekuk untuk membuka atau menutup gembok.": "Notched metal tool to open or close a padlock.",
+    "Alat pengaman berbahan besi yang harus dibuka dengan kuncinya.": "Iron safety device that must be opened with its key.",
+    "Jalur keluar masuk pada sebuah ruangan yang bisa dibuka tutup.": "Entrance and exit path in a room that can be opened and closed.",
+    "Lubang ventilasi udara dan cahaya pada dinding rumah.": "Air and light ventilation hole in the house wall.",
+    "Bintang pusat tata surya yang memancarkan cahaya dan panas di siang hari.": "Central star of the solar system emitting light and heat during the day.",
+    "Satelit alami bumi yang bersinar terang memantulkan cahaya di malam hari.": "Earth's natural satellite shining brightly reflecting light at night.",
+    "Bumbu dapur berbentuk kristal putih yang memberikan rasa asin.": "White crystal shaped kitchen spice that gives a salty taste.",
+    "Bumbu pemanis berbahan dasar tebu yang sering dicampur dalam minuman.": "Sugarcane-based sweetening spice often mixed into drinks.",
+    "Permukaan bumi yang menjulang tinggi, ukurannya lebih besar dari bukit.": "Towering earth surface, larger in size than a hill.",
+    "Dataran rendah yang letaknya berada di antara perbukitan atau pegunungan.": "Lowland located between hills or mountains.",
+    "Aliran air tawar memanjang secara alami dari hulu hingga bermuara di laut.": "Natural elongated fresh water flow from upstream to emptying into the sea.",
+    "Cekungan besar di daratan yang digenangi oleh air tawar secara alami.": "Large basin on land naturally inundated by fresh water.",
+    "Lembaran tipis berbahan serat kayu yang digunakan untuk media menulis.": "Thin sheet made of wood fiber used for writing media.",
+    "Bahan berserat kayu yang ukurannya lebih tebal dan kaku dari kertas biasa.": "Wood fiber material that is thicker and stiffer than regular paper.",
+    "Wadah pembawa barang yang dipakai dengan cara digendong di punggung.": "Goods carrying container worn by carrying on the back.",
+    "Wadah besar berbentuk kotak bersleting, usually memiliki roda untuk bepergian.": "Large zippered box-shaped container, usually has wheels for traveling.",
+    "Kendaraan darat roda empat yang memiliki mesin dan kabin penumpang.": "Four-wheeled land vehicle having an engine and passenger cabin.",
+    "Kendaraan darat besar beroda banyak untuk mengangkut banyak penumpang sekaligus.": "Large multi-wheeled land vehicle to transport many passengers at once.",
+    "Rangkaian gerbong yang berjalan di atas rel besi.": "A series of wagons running on iron rails.",
+    "Kendaraan bermotor besar yang didesain khusus untuk mengangkut barang berat.": "Large motorized vehicle specially designed to transport heavy goods.",
+    "Biji-bijian putih hasil gilingan padi yang merupakan makanan pokok orang Indonesia.": "White grains from milled rice which is the staple food of Indonesians.",
+    "Biji-bijian yang diolah menjadi tepung terigu sebagai bahan utama pembuat roti.": "Grains processed into wheat flour as the main ingredient for making bread.",
+    "Kucing besar yang dikenal sebagai raja hutan dengan surai lebat di lehernya.": "Big cat known as the king of the jungle with a thick mane on its neck.",
+    "Kucing buas berukuran besar yang memiliki corak belang-belang.": "Large wild cat with striped patterns.",
+    "Mamalia berkaki empat yang pandai berlari dan sering dijadikan hewan tunggangan.": "Four-legged mammal good at running and often used as a riding animal.",
+    "Mamalia berkaki empat ternak penghasil daging dan susu murni.": "Four-legged farm mammal producing meat and pure milk.",
+    "Primata berukuran kecil hingga sedang yang pandai memanjat dan memiliki ekor.": "Small to medium sized primate good at climbing and has a tail.",
+    "Kera besar berbulu kemerahan asal Kalimantan dan Sumatera yang tidak berekor.": "Reddish hairy great ape from Kalimantan and Sumatra with no tail.",
+    "Komputer jinjing portabel yang bisa dilipat dan dibawa kemana-mana.": "Portable laptop computer that can be folded and carried anywhere.",
+    "Perangkat pintar berlayar sentuh lebar tanpa keyboard fisik bawaan.": "Smart device with a wide touchscreen without a built-in physical keyboard.",
+    "Telepon genggam pintar yang memiliki fungsi menyerupai komputer mini.": "Smart mobile phone having functions resembling a mini computer.",
+    "Alat komunikasi suara yang tersambung kabel dan tidak bisa dibawa-bawa.": "Wired voice communication device that cannot be carried around.",
+    "Pakaian santai tanpa kerah dan kancing, sering disebut T-shirt.": "Casual clothing without a collar and buttons, often called a T-shirt.",
+    "Pakaian formal atau semi formal berkerah yang memiliki deretan kancing di depan.": "Formal or semi-formal collared clothing having a row of buttons on the front.",
+    "Pakaian penutup bagian bawah tubuh yang menutupi kaki hingga mata kaki.": "Clothing covering the lower body that covers the legs down to the ankles.",
+    "Pakaian bawahan santai yang ukurannya hanya selutut atau di atas lutut.": "Casual bottom clothing whose size is only knee-length or above the knee.",
+    "Benda elektronik bercahaya untuk menerangi ruangan yang gelap.": "Glowing electronic object to illuminate a dark room.",
+    "Sumber penerangan tradisional berupa batang parafin bersumbu yang dibakar.": "Traditional light source in the form of a wicked paraffin stick that is burned.",
     "Alas tebal dan empuk berukuran besar untuk berbaring atau tidur.": "Thick and soft large sized base for lying down or sleeping.",
     "Alas kepala berukuran kecil yang empuk, sangat nyaman dipakai tidur.": "Small soft headrest, very comfortable for sleeping.",
     "Bumbu umbi lapis yang wajib ada untuk menumis berbagai masakan Nusantara.": "Layered bulb spice that must be present for stir-frying various Indonesian dishes.",
@@ -352,10 +517,34 @@ const EXACT_TRANSLATIONS = {
     "Alat pernapasan dan indra penciuman yang menonjol di tengah wajah.": "Breathing apparatus and sense of smell protruding in the middle of the face.",
     "Organ pendengaran yang letaknya berada di sisi kiri dan kanan kepala.": "Hearing organ located on the left and right sides of the head.",
     "Organ pemompa darah yang terus berdetak di dalam rongga dada.": "Blood pumping organ that continues to beat inside the chest cavity.",
-    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Organ rénghap spons di dada tempat bursa oksigén jeung karbon dioksida.",
-    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Wangunan tempat cicing sarta netep pikeun ngiuhan tina hujan jeung panas.",
-    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Tempat ngiuhan portabel tina lawon nu biasa dipaké kémping di alam bébas."
+    "Organ pernapasan spons di dada tempat pertukaran oksigen dan karbon dioksida.": "Spongy respiratory organ in the chest where oxygen and carbon dioxide exchange.",
+    "Bangunan tempat tinggal dan menetap untuk berteduh dari hujan dan panas.": "Building to live and settle to take shelter from rain and heat.",
+    "Tempat berteduh portabel dari kain yang biasa dipakai kemping di alam bebas.": "Portable fabric shelter commonly used for camping in the wild."
   }
+};
+
+const getSimilarity = (s1, s2) => {
+  let longer = s1; let shorter = s2;
+  if (s1.length < s2.length) { longer = s2; shorter = s1; }
+  let longerLength = longer.length;
+  if (longerLength === 0) return 1.0;
+  let costs = new Array();
+  for (let i = 0; i <= longer.length; i++) {
+    let lastValue = i;
+    for (let j = 0; j <= shorter.length; j++) {
+      if (i === 0) costs[j] = j;
+      else {
+        if (j > 0) {
+          let newValue = costs[j - 1];
+          if (longer.charAt(i - 1) !== shorter.charAt(j - 1)) newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+          costs[j - 1] = lastValue;
+          lastValue = newValue;
+        }
+      }
+    }
+    if (i > 0) costs[shorter.length] = lastValue;
+  }
+  return (longerLength - costs[shorter.length]) / parseFloat(longerLength);
 };
 
 const translateWord = (text, lang) => {
@@ -411,27 +600,48 @@ export default function App() {
   const [language, setLanguage] = useState('Indonesia');
   const txt = DICTIONARY[language];
   const [showTutorial, setShowTutorial] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const [customAlert, setCustomAlert] = useState(null);
   
-  // --- STATE KLAIM & APPSTATE ---
   const [isExtraWordsClaimed, setIsExtraWordsClaimed] = useState(false);
   const [showPurchaseModal, setShowPurchaseModal] = useState(false);
   const appState = useRef(AppState.currentState);
   const followStartTime = useRef(null);
 
-  // --- STATE ANIMASI & KAMERA ---
+  const [bgmEnabled, setBgmEnabled] = useState(true);
+  const [sfxEnabled, setSfxEnabled] = useState(true);
+  const [bgmVolume, setBgmVolume] = useState(30); 
+  const [sfxVolume, setSfxVolume] = useState(100); 
+
   const [hintSpeakerIndex, setHintSpeakerIndex] = useState(0);
   const speakerAnim = useRef(new Animated.Value(0)).current;
   const [isTakingPhoto, setIsTakingPhoto] = useState(false);
 
-  // --- STATE UPDATE OTOMATIS ---
   const [isUpdating, setIsUpdating] = useState(false);
   const [updateProgress, setUpdateProgress] = useState(0);
   const progressAnim = useRef(new Animated.Value(0)).current;
 
-  // --- AUDIO SETUP ---
   const [bgmSound, setBgmSound] = useState(null);
+
+  // Kategori kata terpilih
+  const [selectedCategory, setSelectedCategory] = useState('Pangandaran'); 
   
+  useEffect(() => {
+    const loadSettings = async () => {
+      try {
+        const bE = await AsyncStorage.getItem('@bgm_enabled');
+        const sE = await AsyncStorage.getItem('@sfx_enabled');
+        const bV = await AsyncStorage.getItem('@bgm_volume');
+        const sV = await AsyncStorage.getItem('@sfx_volume');
+        if (bE !== null) setBgmEnabled(bE === 'true');
+        if (sE !== null) setSfxEnabled(sE === 'true');
+        if (bV !== null) setBgmVolume(parseInt(bV, 10));
+        if (sV !== null) setSfxVolume(parseInt(sV, 10));
+      } catch(e){}
+    };
+    loadSettings();
+  }, []);
+
   useEffect(() => {
     async function loadBGM() {
       try {
@@ -441,16 +651,28 @@ export default function App() {
           shouldDuckAndroid: true,
           playThroughEarpieceAndroid: false,
         });
-        const { sound } = await Audio.Sound.createAsync(require('./assets/bgm.mp3'), { isLooping: true, volume: 0.3 });
+        const { sound } = await Audio.Sound.createAsync(require('./assets/bgm.mp3'), { isLooping: true });
         setBgmSound(sound);
         await sound.playAsync();
-      } catch (e) { console.log('BGM tidak ditemukan'); }
+      } catch (e) {}
     }
     loadBGM();
     return () => { if (bgmSound) bgmSound.unloadAsync(); }
   }, []);
 
-  // --- CEK UPDATE OTOMATIS (OTA) DENGAN LOADING BAR ---
+  useEffect(() => {
+    if (bgmSound) {
+      bgmSound.setVolumeAsync(bgmEnabled ? bgmVolume / 100 : 0);
+    }
+    AsyncStorage.setItem('@bgm_enabled', bgmEnabled.toString());
+    AsyncStorage.setItem('@bgm_volume', bgmVolume.toString());
+  }, [bgmEnabled, bgmVolume, bgmSound]);
+
+  useEffect(() => {
+    AsyncStorage.setItem('@sfx_enabled', sfxEnabled.toString());
+    AsyncStorage.setItem('@sfx_volume', sfxVolume.toString());
+  }, [sfxEnabled, sfxVolume]);
+
   useEffect(() => {
     async function checkUpdates() {
       try {
@@ -464,49 +686,33 @@ export default function App() {
               setCustomAlert(null);
               setIsUpdating(true);
 
-              // Mulai animasi loading dari 0 ke 90 selama 15 detik (estimasi)
               Animated.timing(progressAnim, {
-                toValue: 90,
-                duration: 15000,
+                toValue: 100,
+                duration: 200, // Langsung isi progress bar
                 useNativeDriver: false,
-              }).start();
+              }).start(async () => {
+                setUpdateProgress(100);
+                await Updates.fetchUpdateAsync();
+                await Updates.reloadAsync(); // Reload instan tanpa timeout
+              });
 
               progressAnim.addListener(({ value }) => {
                 setUpdateProgress(Math.floor(value));
               });
-
-              // Proses unduh asli di belakang layar
-              await Updates.fetchUpdateAsync();
-              
-              // Jika unduhan selesai, paksa animasi ke 100% dengan cepat
-              Animated.timing(progressAnim, {
-                toValue: 100,
-                duration: 500,
-                useNativeDriver: false,
-              }).start(async () => {
-                setUpdateProgress(100);
-                setTimeout(async () => {
-                  await Updates.reloadAsync();
-                }, 800);
-              });
             }
           });
         }
-      } catch (e) {
-        // Abaikan error saat di development (Expo Go)
-      }
+      } catch (e) {}
     }
     if (!__DEV__) {
       checkUpdates();
     }
-
-    return () => {
-      progressAnim.removeAllListeners();
-    };
+    return () => { progressAnim.removeAllListeners(); };
   }, []);
 
   const playSFX = async (type) => {
     try {
+      if (!sfxEnabled) return;
       let file;
       if (type === 'click') file = require('./assets/click.mp3');
       if (type === 'flip') file = require('./assets/flip.mp3');
@@ -518,21 +724,16 @@ export default function App() {
       
       if (file) {
         const { sound } = await Audio.Sound.createAsync(file);
+        await sound.setVolumeAsync(sfxVolume / 100);
         
-        // MENGHINDARI MEMORY LEAK AUDIO DI ANDROID (SUARA HILANG)
         sound.setOnPlaybackStatusUpdate((status) => {
-          if (status.didJustFinish) {
-            sound.unloadAsync();
-          }
+          if (status.didJustFinish) { sound.unloadAsync(); }
         });
         
-        // JIKA MENANG, PAUSE BGM SEMENTARA MENUNGGU EFEK WIN SELESAI
-        if (type === 'win' && bgmSound) {
+        if (type === 'win' && bgmSound && bgmEnabled) {
           await bgmSound.pauseAsync();
           await sound.playAsync();
-          setTimeout(() => {
-             bgmSound.playAsync();
-          }, 3000); 
+          setTimeout(() => { bgmSound.playAsync(); }, 3000); 
         } else {
           await sound.playAsync();
         }
@@ -540,7 +741,6 @@ export default function App() {
     } catch (e) {}
   };
   
-  // --- CAMERA & SHARE ---
   const [permission, requestPermission] = useCameraPermissions();
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [activeCameraPlayerId, setActiveCameraPlayerId] = useState(null);
@@ -553,18 +753,15 @@ export default function App() {
   const [boothPhotos, setBoothPhotos] = useState({}); 
   const [currentBoothIndex, setCurrentBoothIndex] = useState(0);
 
-  // --- GAME SETTINGS ---
   const [totalPlayers, setTotalPlayers] = useState(4);
   const [undercoverCount, setUndercoverCount] = useState(1);
   const [mrWhiteCount, setMrWhiteCount] = useState(0);
 
-  // ANIMASI SPLASH & TITTLE
   const [splashPhase, setSplashPhase] = useState(1);
   const dropScale = useRef(new Animated.Value(0)).current;
   const mainSplashAnim = useRef(new Animated.Value(0)).current;
   const subtitleAnim = useRef(new Animated.Value(0)).current;
 
-  // EFEK SUBTITLE ROCKING
   useEffect(() => {
     const rock = () => {
       Animated.sequence([
@@ -577,7 +774,6 @@ export default function App() {
   }, []);
   const rotateSubtitle = subtitleAnim.interpolate({ inputRange: [-1, 1], outputRange: ['-6deg', '6deg'] });
 
-  // CEK KLAIM KATA DI LOKAL & DETEKSI FOLLOW
   useEffect(() => {
     const checkClaimStatus = async () => {
       try {
@@ -618,13 +814,11 @@ export default function App() {
     await Linking.openURL('https://instagram.com/appratamaa_');
   };
 
-  // TAP 1X UNTUK LINKEDIN 
   const handleCopyrightPress = () => {
     playSFX('click');
     Linking.openURL('https://linkedin.com/in/andreputrap');
   };
 
-  // EFEK SPLASH SCREEN WATER DROP LAMBAT
   useEffect(() => {
     if (screen === 'SPLASH') {
       Animated.timing(dropScale, { toValue: 100, duration: 1200, useNativeDriver: true }).start(() => {
@@ -636,7 +830,6 @@ export default function App() {
     }
   }, [screen]);
 
-  // EFEK PENYESUAIAN OTOMATIS SAAT TOTAL MARLIN DIKURANGI
   useEffect(() => {
     const maxL = totalPlayers >= 4 ? 2 : 0;
     const maxB = Math.floor(totalPlayers / 2);
@@ -676,7 +869,6 @@ export default function App() {
   const frontOpacity = flipAnim.interpolate({ inputRange: [89, 90], outputRange: [1, 0] });
   const backOpacity = flipAnim.interpolate({ inputRange: [89, 90], outputRange: [0, 1] });
 
-  // EFEK ANIMASI TERBANG (FLY UP)
   useEffect(() => {
     if (screen === 'SPEAKER_TURN') {
       speakerAnim.setValue(0);
@@ -731,7 +923,6 @@ export default function App() {
   };
 
   const initPlayers = () => {
-    playSFX('click');
     let initialPlayers = [];
     for(let i=0; i<totalPlayers; i++){
       initialPlayers.push({
@@ -759,30 +950,35 @@ export default function App() {
   };
 
   const takeProfilePicture = async () => {
+    if (isTakingPhoto) return;
     playSFX('camera');
     if (cameraRef.current) {
-      const photo = await cameraRef.current.takePictureAsync({ quality: 0.5, shutterSound: false }); // MUTED SHUTTER
-      updatePlayerInfo(activeCameraPlayerId, 'photoUri', photo.uri);
-      setIsCameraOpen(false);
+      setIsTakingPhoto(true);
+      try {
+        const photo = await cameraRef.current.takePictureAsync({ quality: 0.5, shutterSound: false });
+        updatePlayerInfo(activeCameraPlayerId, 'photoUri', photo.uri);
+        setIsCameraOpen(false);
+      } finally {
+        setIsTakingPhoto(false);
+      }
     }
   };
 
   const startRound = () => {
     let db = wordDatabase.pangandaran || [{warga: "Pantai", descWarga: "Wisata Air", penyusup: "Gunung", descPenyusup: "Tempat Tinggi"}];
-    if (isExtraWordsClaimed && wordDatabase.ekstra) {
-      db = [...db, ...wordDatabase.ekstra];
+    if (selectedCategory === 'Umum' && isExtraWordsClaimed && wordDatabase.ekstra) {
+      db = wordDatabase.ekstra;
     }
     
     const item = db[Math.floor(Math.random() * db.length)];
     
-    // Menyimpan base word dalam 3 bahasa untuk kebutuhan validasi
     setCivilianWordObj({ 
       wordID: item.warga,
       wordSU: translateWord(item.warga, 'Sunda'),
       wordEN: translateWord(item.warga, 'Inggris'),
       word: translateWord(item.warga, language), 
       desc: translateWord(item.descWarga, language),
-      undercoverWord: translateWord(item.penyusup, language) // <--- MENYIMPAN KATA BANTENG
+      undercoverWord: translateWord(item.penyusup, language) 
     });
 
     let rolePool = [];
@@ -792,13 +988,11 @@ export default function App() {
     for(let i=0; i<undercoverCount; i++) rolePool.push({ role: txt.ROLE_UNDERCOVER, word: translateWord(item.penyusup, language), desc: translateWord(item.descPenyusup, language) });
     for(let i=0; i<mrWhiteCount; i++) rolePool.push({ role: txt.ROLE_MRWHITE, word: '???', desc: txt.MR_WHITE_DESC });
 
-    // PENGACAKAN ROLE MENGGUNAKAN FISHER-YATES SHUFFLE AGAR BENAR BENAR RANDOM
     for (let i = rolePool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [rolePool[i], rolePool[j]] = [rolePool[j], rolePool[i]];
     }
 
-    // Pastikan Lutung bukan urutan pertama di putaran awal
     if (rolePool[0].role === txt.ROLE_MRWHITE) {
       const swapIdx = rolePool.findIndex(r => r.role !== txt.ROLE_MRWHITE);
       if (swapIdx > 0) {
@@ -814,6 +1008,8 @@ export default function App() {
     setCurrentPlayerIndex(0);
     setTurnCounter(1);
     setMrWhiteGuess("");
+    setIsFlipped(false);
+    setHintSpeakerIndex(0);
     flipAnim.setValue(0);
     changeScreen('PASS_PHONE');
   };
@@ -823,20 +1019,36 @@ export default function App() {
     const aliveB = players.filter(p => p.isAlive && p.role === txt.ROLE_UNDERCOVER).length;
     const aliveL = players.filter(p => p.isAlive && p.role === txt.ROLE_MRWHITE).length;
 
-    // JIKA TERSISA <= 2 ORANG DAN ADA LUTUNG, LANGSUNG TEBAK LUTUNG
-    if (aliveL > 0 && (aliveB === 0 || aliveM === 0 || (aliveM + aliveB + aliveL <= 2))) {
-      changeScreen('MR_WHITE_GUESS');
-      return true;
-    } else if (aliveM === 0) {
-      processWin(txt.ROLE_UNDERCOVER);
-      return true;
-    } else if (aliveB === 0 && aliveL === 0) {
-      processWin(txt.ROLE_CIVILIAN);
-      return true;
-    } else if (aliveL === 0 && aliveM <= aliveB) {
+    if (aliveB === 0) {
+      if (aliveL > 0) {
+        if (aliveM >= 2) {
+          processWin(txt.ROLE_CIVILIAN); 
+          return true;
+        } else if (aliveM === 1) {
+          processWin(txt.ROLE_MRWHITE); 
+          return true;
+        }
+      } else {
+        processWin(txt.ROLE_CIVILIAN); 
+        return true;
+      }
+    }
+
+    if (aliveM === 0) {
+      if (aliveL > 0 && aliveB >= 1) {
+        changeScreen('MR_WHITE_GUESS');
+        return true;
+      } else {
+        processWin(txt.ROLE_UNDERCOVER);
+        return true;
+      }
+    }
+
+    if (aliveM <= aliveB && aliveL === 0) {
       processWin(txt.ROLE_UNDERCOVER);
       return true;
     }
+
     return false;
   };
 
@@ -851,7 +1063,6 @@ export default function App() {
       } else { 
         const isEndgame = checkEndgameOrProceed();
         if (!isEndgame) {
-          // Cari pemain pertama yang masih hidup untuk fase Hint
           let startIdx = 0;
           while(startIdx < players.length && !players[startIdx].isAlive) startIdx++;
           setHintSpeakerIndex(startIdx);
@@ -864,7 +1075,6 @@ export default function App() {
   const processWin = (winningTeam) => {
     const updatedPlayers = players.map(p => {
       let newScore = p.score;
-      // JIKA LUTUNG MENANG: Lutung +50 (menebus minus eliminasi), Banteng +15, Marlin +5
       if (winningTeam === txt.ROLE_MRWHITE) {
          if (p.role === txt.ROLE_MRWHITE) newScore += 50;
          else if (p.role === txt.ROLE_UNDERCOVER) newScore += 15;
@@ -872,7 +1082,7 @@ export default function App() {
       } else {
          if (p.role === winningTeam) newScore += 10; 
       }
-      return { ...p, score: Math.max(0, newScore) }; // Kunci skor agar tidak tembus angka minus
+      return { ...p, score: Math.max(0, newScore) }; 
     });
     setPlayers(updatedPlayers);
     setWinnerLog(`TIM ${winningTeam.toUpperCase()} MENANG!`);
@@ -908,7 +1118,6 @@ export default function App() {
     } else {
       const isEndgame = checkEndgameOrProceed();
       if (!isEndgame) {
-        // ACAK URUTAN PEMAIN SETELAH VOTE AGAR LEBIH ADIL
         let nextPlayers = [...players];
         for (let i = nextPlayers.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -928,10 +1137,8 @@ export default function App() {
   const handleMrWhiteGuess = () => {
     playSFX('click');
     const rawGuess = mrWhiteGuess.trim();
-    // Validasi menerima huruf, angka, spasi, dan dash
     const regexValid = /^[a-zA-Z0-9\s\-]*$/;
     
-    // JIKA TIDAK VALID (TETAP DI SCREEN MENEBAK)
     if (!regexValid.test(rawGuess) || rawGuess === '') {
       playSFX('wrong');
       setCustomAlert({
@@ -945,13 +1152,25 @@ export default function App() {
 
     const cleanedGuess = rawGuess.replace(/\s+/g, '').toLowerCase();
     
-    const validAnswers = [
+    const aliveM = players.filter(p => p.isAlive && p.role === txt.ROLE_CIVILIAN).length;
+    const isGuessingBanteng = aliveM === 0;
+
+    const validAnswers = isGuessingBanteng ? [
+      civilianWordObj.undercoverWord?.replace(/\s+/g, '').toLowerCase()
+    ] : [
       civilianWordObj.wordID?.replace(/\s+/g, '').toLowerCase(),
       civilianWordObj.wordSU?.replace(/\s+/g, '').toLowerCase(),
       civilianWordObj.wordEN?.replace(/\s+/g, '').toLowerCase()
     ];
     
-    if (validAnswers.includes(cleanedGuess)) {
+    let isCorrect = false;
+    for (let ans of validAnswers) {
+      if (ans && getSimilarity(cleanedGuess, ans) >= 0.8) {
+        isCorrect = true; break;
+      }
+    }
+
+    if (isCorrect) {
       processWin(txt.ROLE_MRWHITE);
     } else {
       playSFX('wrong');
@@ -960,18 +1179,21 @@ export default function App() {
         message: txt.ALERT_WRONG_MSG,
         btnText: txt.ALERT_BTN_OK,
         onConfirm: () => {
-          const aliveM = players.filter(p => p.isAlive && p.role === txt.ROLE_CIVILIAN).length;
-          const aliveB = players.filter(p => p.isAlive && p.role === txt.ROLE_UNDERCOVER).length;
-          if (aliveM === 0) processWin(txt.ROLE_UNDERCOVER);
-          else if (aliveB === 0) processWin(txt.ROLE_CIVILIAN);
-          else if (aliveM <= aliveB) processWin(txt.ROLE_UNDERCOVER);
-          else changeScreen('DISCUSSION'); // Jika lanjut, masuk ke menu bebas (VOTE)
+          if (isGuessingBanteng) {
+            processWin(txt.ROLE_UNDERCOVER);
+          } else {
+            const aM = players.filter(p => p.isAlive && p.role === txt.ROLE_CIVILIAN).length;
+            const aB = players.filter(p => p.isAlive && p.role === txt.ROLE_UNDERCOVER).length;
+            if (aM === 0) processWin(txt.ROLE_UNDERCOVER);
+            else if (aB === 0) processWin(txt.ROLE_CIVILIAN);
+            else if (aM <= aB) processWin(txt.ROLE_UNDERCOVER);
+            else changeScreen('DISCUSSION'); 
+          }
         }
       });
     }
   };
 
-  // ANIMASI TERBANG TURUN (FLY DOWN) DAN LANJUT KE PEMAIN BERIKUTNYA
   const nextSpeaker = () => {
     Animated.timing(speakerAnim, { toValue: 0, duration: 300, useNativeDriver: true }).start(() => {
         let nextIdx = hintSpeakerIndex + 1;
@@ -980,7 +1202,6 @@ export default function App() {
         if (nextIdx < players.length) {
             setHintSpeakerIndex(nextIdx);
         } else {
-            // Semua pemain sudah giliran memberi clue, langsung ke grid bebas (VOTE)
             changeScreen('DISCUSSION'); 
         }
     });
@@ -996,12 +1217,12 @@ export default function App() {
   };
 
   const takeBoothPicture = async () => {
-    if (isTakingPhoto) return; // Mencegah spam klik kamera yang bikin force close
+    if (isTakingPhoto) return; 
     playSFX('camera');
     if (cameraRef.current) {
       setIsTakingPhoto(true);
       try {
-        const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, shutterSound: false }); // MUTED SHUTTER
+        const photo = await cameraRef.current.takePictureAsync({ quality: 0.6, shutterSound: false }); 
         const currentPlayerId = players[currentBoothIndex].id;
         
         setBoothPhotos(prev => ({ ...prev, [currentPlayerId]: photo.uri }));
@@ -1010,7 +1231,7 @@ export default function App() {
           setCurrentBoothIndex(prev => prev + 1); 
         } else {
           setIsCameraOpen(false); 
-          changeScreen('PHOTOBOOTH_RESULT', true); // Silent change
+          changeScreen('PHOTOBOOTH_RESULT', true); 
         }
       } finally {
         setIsTakingPhoto(false);
@@ -1026,7 +1247,6 @@ export default function App() {
     } catch (err) {}
   };
 
-  // --- RENDER SPLASH SCREEN ---
   if (screen === 'SPLASH') {
     if (splashPhase === 1) {
       return (
@@ -1056,11 +1276,10 @@ export default function App() {
     );
   }
 
-  // --- RENDER CAMERA OVERLAY ---
   if (isCameraOpen) {
     return (
       <View style={{flex: 1, backgroundColor: '#000'}}>
-        <View style={{position: 'absolute', top: Platform.OS === 'ios' ? 50 : 30, right: 20, flexDirection: 'row', zIndex: 100}}>
+        <View style={{position: 'absolute', top: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 15 : 50, right: 20, flexDirection: 'row', zIndex: 100}}>
           <TouchableOpacity style={styles.camIconBtn} onPress={() => { playSFX('click'); setCameraFacing(f => f === 'front' ? 'back' : 'front'); }}>
             <Ionicons name="camera-reverse" size={28} color="#2C3E50" />
           </TouchableOpacity>
@@ -1088,10 +1307,8 @@ export default function App() {
     );
   }
 
-  // --- RENDER SCREENS UTAMA ---
   return (
     <>
-      {/* CUSTOM POPUP ALERT GLOBALS */}
       {customAlert && (
         <Modal transparent visible animationType="fade">
           <View style={styles.modalOverlayList}>
@@ -1107,7 +1324,6 @@ export default function App() {
         </Modal>
       )}
 
-      {/* MODAL UPDATE PROGRESS */}
       {isUpdating && (
         <Modal transparent visible animationType="fade">
           <View style={styles.modalOverlayList}>
@@ -1115,11 +1331,9 @@ export default function App() {
               <Ionicons name="cloud-download" size={60} color="#3498DB" />
               <Text style={[styles.headerText, {color: '#3498DB', fontSize: 24, marginTop: 10}]}>MENGUNDUH...</Text>
               <View style={styles.line} />
-              
               <View style={{width: '100%', height: 20, backgroundColor: '#ECF0F1', borderRadius: 10, overflow: 'hidden', marginVertical: 15}}>
                 <Animated.View style={{width: progressAnim.interpolate({inputRange: [0, 100], outputRange: ['0%', '100%']}), height: '100%', backgroundColor: '#2ECC71'}} />
               </View>
-              
               <Text style={[styles.hugeText, {color: '#2C3E50', fontSize: 36, marginVertical: 0}]}>{updateProgress}%</Text>
               <Text style={[styles.infoSectionText, {textAlign: 'center', marginTop: 10}]}>Mohon tunggu dan jangan tutup aplikasi ini.</Text>
             </View>
@@ -1127,7 +1341,85 @@ export default function App() {
         </Modal>
       )}
 
-      {/* MODAL PURCHASE EXTRA WORDS */}
+      {/* PENGATURAN MODAL */}
+      {showSettings && (
+        <Modal visible={showSettings} transparent animationType="slide" onRequestClose={() => setShowSettings(false)}>
+          <View style={styles.modalOverlayList}>
+            <View style={styles.modalContentList}>
+              <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 20, borderBottomWidth: 2, borderColor: '#ECF0F1'}}>
+                <Text style={styles.headerTextList}>{txt.SETTINGS}</Text>
+                <TouchableOpacity onPress={() => { playSFX('click'); setShowSettings(false); }}>
+                  <Ionicons name="close-circle" size={36} color="#E74C3C" />
+                </TouchableOpacity>
+              </View>
+
+              <ScrollView contentContainerStyle={{padding: 20}}>
+                <View style={styles.rowSetting}>
+                  <Text style={styles.labelText}>{txt.BGM}</Text>
+                  <TouchableOpacity onPress={() => { playSFX('click'); setBgmEnabled(!bgmEnabled); }}>
+                    <Ionicons name={bgmEnabled ? "volume-high" : "volume-mute"} size={36} color={bgmEnabled ? "#2ECC71" : "#E74C3C"} />
+                  </TouchableOpacity>
+                </View>
+                {bgmEnabled && (
+                    <View style={styles.rowSetting}>
+                      <Text style={[styles.labelText, {fontSize: 16}]}>{txt.VOL} BGM</Text>
+                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <TouchableOpacity style={[styles.btnCounter, {width: 35, height: 35}]} onPress={() => { playSFX('click'); if(bgmVolume > 0) setBgmVolume(bgmVolume - 10); }}><Text style={[styles.btnCounterText, {fontSize: 18}]}>-</Text></TouchableOpacity>
+                        <Text style={[styles.valText, {fontSize: 16, width: 45}]}>{bgmVolume}%</Text>
+                        <TouchableOpacity style={[styles.btnCounter, {width: 35, height: 35}]} onPress={() => { playSFX('click'); if(bgmVolume < 100) setBgmVolume(bgmVolume + 10); }}><Text style={[styles.btnCounterText, {fontSize: 18}]}>+</Text></TouchableOpacity>
+                      </View>
+                    </View>
+                )}
+
+                <View style={styles.line} />
+
+                <View style={styles.rowSetting}>
+                  <Text style={styles.labelText}>{txt.SFX}</Text>
+                  <TouchableOpacity onPress={() => { playSFX('click'); setSfxEnabled(!sfxEnabled); }}>
+                    <Ionicons name={sfxEnabled ? "volume-high" : "volume-mute"} size={36} color={sfxEnabled ? "#2ECC71" : "#E74C3C"} />
+                  </TouchableOpacity>
+                </View>
+                {sfxEnabled && (
+                    <View style={styles.rowSetting}>
+                      <Text style={[styles.labelText, {fontSize: 16}]}>{txt.VOL} SFX</Text>
+                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                        <TouchableOpacity style={[styles.btnCounter, {width: 35, height: 35}]} onPress={() => { playSFX('click'); if(sfxVolume > 0) setSfxVolume(sfxVolume - 10); }}><Text style={[styles.btnCounterText, {fontSize: 18}]}>-</Text></TouchableOpacity>
+                        <Text style={[styles.valText, {fontSize: 16, width: 45}]}>{sfxVolume}%</Text>
+                        <TouchableOpacity style={[styles.btnCounter, {width: 35, height: 35}]} onPress={() => { playSFX('click'); if(sfxVolume < 100) setSfxVolume(sfxVolume + 10); }}><Text style={[styles.btnCounterText, {fontSize: 18}]}>+</Text></TouchableOpacity>
+                      </View>
+                    </View>
+                )}
+
+                <View style={styles.line} />
+
+                <View style={styles.rowSetting}>
+                  <Text style={styles.labelText}>{txt.CAM_PERM}</Text>
+                  <TouchableOpacity 
+                    style={{ width: 50, height: 28, borderWidth: 3, borderColor: '#2C3E50', backgroundColor: permission?.granted ? '#2ECC71' : '#E74C3C', justifyContent: 'center', alignItems: permission?.granted ? 'flex-end' : 'flex-start', padding: 2 }}
+                    activeOpacity={1}
+                    onPress={async () => {
+                      playSFX('click');
+                      if (permission?.granted) Linking.openSettings();
+                      else {
+                        const req = await requestPermission();
+                        if (!req.granted) Linking.openSettings();
+                      }
+                    }}
+                  >
+                    <View style={{ width: 16, height: 16, backgroundColor: '#FFF', borderWidth: 3, borderColor: '#2C3E50' }} />
+                  </TouchableOpacity>
+                </View>
+
+                <View style={[styles.line, {marginTop: 30}]} />
+                <Text style={{textAlign: 'center', color: '#7F8C8D', fontWeight: 'bold', fontSize: 16, marginTop: 10}}>
+                  {GAME_NAME} {GAME_VERSION}
+                </Text>
+              </ScrollView>
+            </View>
+          </View>
+        </Modal>
+      )}
+
       {showPurchaseModal && (
         <Modal transparent visible animationType="slide" onRequestClose={() => setShowPurchaseModal(false)}>
           <View style={styles.modalOverlayList}>
@@ -1139,7 +1431,6 @@ export default function App() {
               <Text style={[styles.infoSectionText, {textAlign: 'center', marginVertical: 15}]}>
                 {txt.CLAIM_DESC}
               </Text>
-              
               <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#3498DB', marginBottom: 10}]} onPress={claimExtraWords}>
                 <Text style={styles.btnPrimaryText}>FOLLOW @appratamaa_</Text>
               </TouchableOpacity>
@@ -1151,66 +1442,66 @@ export default function App() {
         </Modal>
       )}
 
-      {/* MODAL TUTORIAL INFORMASI */}
-      <Modal visible={showTutorial} transparent animationType="slide" onRequestClose={() => setShowTutorial(false)}>
-        <View style={styles.modalOverlayList}>
-          <View style={styles.modalContentList}>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 20, borderBottomWidth: 2, borderColor: '#ECF0F1'}}>
-              <Text style={styles.headerTextList}>{txt.INFO_TITLE}</Text>
-              <TouchableOpacity onPress={() => { playSFX('click'); setShowTutorial(false); }}>
-                <Ionicons name="close-circle" size={36} color="#E74C3C" />
-              </TouchableOpacity>
+      {showTutorial && (
+        <Modal visible={showTutorial} transparent animationType="slide" onRequestClose={() => setShowTutorial(false)}>
+          <View style={styles.modalOverlayList}>
+            <View style={styles.modalContentList}>
+              <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 20, borderBottomWidth: 2, borderColor: '#ECF0F1'}}>
+                <Text style={styles.headerTextList}>{txt.INFO_TITLE}</Text>
+                <TouchableOpacity onPress={() => { playSFX('click'); setShowTutorial(false); }}>
+                  <Ionicons name="close-circle" size={36} color="#E74C3C" />
+                </TouchableOpacity>
+              </View>
+              <ScrollView contentContainerStyle={{padding: 20}}>
+                <View style={styles.infoSection}>
+                  <Ionicons name="game-controller" size={30} color="#3498DB" />
+                  <View style={{marginLeft: 15, flex: 1}}>
+                    <Text style={styles.infoSectionTitle}>{txt.INFO_HOWTO_TITLE}</Text>
+                    <Text style={styles.infoSectionText}>{txt.INFO_HOWTO_DESC}</Text>
+                  </View>
+                </View>
+                <View style={styles.infoSection}>
+                  <Ionicons name="people" size={30} color="#F39C12" />
+                  <View style={{marginLeft: 15, flex: 1}}>
+                    <Text style={styles.infoSectionTitle}>{txt.INFO_ROLE_TITLE}</Text>
+                    <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#3498DB'}}>🐟 {txt.INFO_ROLE_DESC1}</Text></Text>
+                    <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#E74C3C'}}>🐂 {txt.INFO_ROLE_DESC2}</Text></Text>
+                    <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#9B59B6'}}>🐒 {txt.INFO_ROLE_DESC3}</Text></Text>
+                  </View>
+                </View>
+                <View style={styles.infoSection}>
+                  <Ionicons name="sync" size={30} color="#2ECC71" />
+                  <View style={{marginLeft: 15, flex: 1}}>
+                    <Text style={styles.infoSectionTitle}>{txt.INFO_ROUND_TITLE}</Text>
+                    <Text style={styles.infoSectionText}>{txt.INFO_ROUND_DESC}</Text>
+                  </View>
+                </View>
+                <View style={[styles.infoSection, {borderBottomWidth: 0, marginBottom: 20}]}>
+                  <Ionicons name="star" size={30} color="#F1C40F" />
+                  <View style={{marginLeft: 15, flex: 1}}>
+                    <Text style={styles.infoSectionTitle}>{txt.INFO_SCORE_TITLE}</Text>
+                    <Text style={styles.infoSectionText}>{txt.INFO_SCORE_DESC}</Text>
+                  </View>
+                </View>
+                <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#2ECC71'}]} onPress={() => { playSFX('click'); setShowTutorial(false); }}>
+                  <Text style={styles.btnPrimaryText}>{txt.UNDERSTAND}</Text>
+                </TouchableOpacity>
+              </ScrollView>
             </View>
-
-            <ScrollView contentContainerStyle={{padding: 20}}>
-              <View style={styles.infoSection}>
-                <Ionicons name="game-controller" size={30} color="#3498DB" />
-                <View style={{marginLeft: 15, flex: 1}}>
-                  <Text style={styles.infoSectionTitle}>{txt.INFO_HOWTO_TITLE}</Text>
-                  <Text style={styles.infoSectionText}>{txt.INFO_HOWTO_DESC}</Text>
-                </View>
-              </View>
-
-              <View style={styles.infoSection}>
-                <Ionicons name="people" size={30} color="#F39C12" />
-                <View style={{marginLeft: 15, flex: 1}}>
-                  <Text style={styles.infoSectionTitle}>{txt.INFO_ROLE_TITLE}</Text>
-                  <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#3498DB'}}>🐟 {txt.INFO_ROLE_DESC1}</Text></Text>
-                  <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#E74C3C'}}>🐂 {txt.INFO_ROLE_DESC2}</Text></Text>
-                  <Text style={styles.infoSectionText}><Text style={{fontWeight: '900', color: '#9B59B6'}}>🐒 {txt.INFO_ROLE_DESC3}</Text></Text>
-                </View>
-              </View>
-
-              <View style={styles.infoSection}>
-                <Ionicons name="sync" size={30} color="#2ECC71" />
-                <View style={{marginLeft: 15, flex: 1}}>
-                  <Text style={styles.infoSectionTitle}>{txt.INFO_ROUND_TITLE}</Text>
-                  <Text style={styles.infoSectionText}>{txt.INFO_ROUND_DESC}</Text>
-                </View>
-              </View>
-
-              <View style={[styles.infoSection, {borderBottomWidth: 0, marginBottom: 20}]}>
-                <Ionicons name="star" size={30} color="#F1C40F" />
-                <View style={{marginLeft: 15, flex: 1}}>
-                  <Text style={styles.infoSectionTitle}>{txt.INFO_SCORE_TITLE}</Text>
-                  <Text style={styles.infoSectionText}>{txt.INFO_SCORE_DESC}</Text>
-                </View>
-              </View>
-
-              <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#2ECC71'}]} onPress={() => { playSFX('click'); setShowTutorial(false); }}>
-                <Text style={styles.btnPrimaryText}>{txt.UNDERSTAND}</Text>
-              </TouchableOpacity>
-            </ScrollView>
           </View>
-        </View>
-      </Modal>
+        </Modal>
+      )}
 
       {screen === 'HOME' && (
         <SafeAreaView style={styles.container}>
           <StatusBar barStyle="dark-content" backgroundColor="#ECF0F1" />
           <AnimatedBackgroundDecor />
           
-          <TouchableOpacity style={{position: 'absolute', top: 50, right: 20, zIndex: 10}} onPress={() => { playSFX('click'); setShowTutorial(true); }}>
+          <TouchableOpacity style={{position: 'absolute', top: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 15 : 45, left: 20, zIndex: 10}} onPress={() => { playSFX('click'); setShowSettings(true); }}>
+            <Ionicons name="settings" size={40} color="#2C3E50" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{position: 'absolute', top: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 15 : 45, right: 20, zIndex: 10}} onPress={() => { playSFX('click'); setShowTutorial(true); }}>
             <Ionicons name="information-circle" size={45} color="#2C3E50" />
           </TouchableOpacity>
 
@@ -1292,6 +1583,23 @@ export default function App() {
                 </View>
 
                 <View style={styles.line} />
+
+                <Text style={[styles.labelText, {textAlign: 'center'}]}>KATEGORI KATA</Text>
+                <View style={{flexDirection: 'row', marginTop: 10}}>
+                  <TouchableOpacity style={[styles.btnAction, {flex: 1, marginRight: 5, backgroundColor: selectedCategory === 'Pangandaran' ? '#2ECC71' : '#95a5a6'}]} onPress={() => {playSFX('click'); setSelectedCategory('Pangandaran')}}>
+                     <Text style={styles.btnActionText}>Pangandaran</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={[styles.btnAction, {flex: 1, marginLeft: 5, backgroundColor: selectedCategory === 'Umum' ? '#2ECC71' : '#95a5a6'}]} onPress={() => {
+                     playSFX('click'); 
+                     if(isExtraWordsClaimed) setSelectedCategory('Umum'); 
+                     else setCustomAlert({ title: 'TERKUNCI', message: 'Klaim KATA UMUM terlebih dahulu di menu utama!', btnText: 'OK', onConfirm: ()=>setCustomAlert(null) });
+                  }}>
+                     <Text style={styles.btnActionText}>{isExtraWordsClaimed ? 'Umum' : '🔒 Umum'}</Text>
+                  </TouchableOpacity>
+                </View>
+                
+                <View style={styles.line} />
+
                 <Text style={[styles.labelText, {textAlign: 'center', color: '#2ECC71'}]}>{txt.ROLE_CIVILIAN.toUpperCase()}: {totalPlayers - undercoverCount - mrWhiteCount}</Text>
               </View>
               <TouchableOpacity style={[styles.btnPrimary, {marginTop: 20}]} onPress={initPlayers}>
@@ -1426,7 +1734,7 @@ export default function App() {
       {screen === 'DISCUSSION' && (
         <SafeAreaView style={styles.container}>
           <AnimatedBackgroundDecor />
-          <ScrollView contentContainerStyle={{padding: 20, paddingBottom: 60}}>
+          <ScrollView contentContainerStyle={{padding: 20, paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 20 : 20, paddingBottom: 60}}>
             <Text style={styles.headerText}>{txt.DISCUSSION}</Text>
             <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 20, color: '#7F8C8D'}]}>SIAPAKAH PENYUSUPNYA?</Text>
             
@@ -1501,25 +1809,32 @@ export default function App() {
         </SafeAreaView>
       )}
 
-      {screen === 'MR_WHITE_GUESS' && (
-        <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <SafeAreaView style={styles.container}>
-            <AnimatedBackgroundDecor />
-            <View style={styles.contentCenter}>
-              <View style={[styles.cardBase, {alignItems: 'center'}]}>
-                <Text style={styles.headerText}>{txt.GUESS_TITLE}</Text>
-                <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 20, color: '#7F8C8D'}]}>{txt.GUESS_DESC}</Text>
-                
-                <TextInput style={styles.textInputFull} placeholder={txt.GUESS_INPUT} value={mrWhiteGuess} onChangeText={setMrWhiteGuess} />
-                
-                <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#2ECC71', width: '100%', marginTop: 20}]} onPress={handleMrWhiteGuess}>
-                  <Text style={styles.btnPrimaryText}>{txt.GUESS_BTN}</Text>
-                </TouchableOpacity>
+      {screen === 'MR_WHITE_GUESS' && (() => {
+        const lutungPlayer = players.find(p => p.isAlive && p.role === txt.ROLE_MRWHITE) || players.find(p => p.role === txt.ROLE_MRWHITE);
+        const lutungName = lutungPlayer ? lutungPlayer.name : '';
+        const isGuessingBanteng = players.filter(p => p.isAlive && p.role === txt.ROLE_CIVILIAN).length === 0;
+        const guessTitleText = isGuessingBanteng ? "TEBAKAN UNTUK BANTENG" : txt.GUESS_TITLE;
+
+        return (
+          <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+            <SafeAreaView style={styles.container}>
+              <AnimatedBackgroundDecor />
+              <View style={styles.contentCenter}>
+                <View style={[styles.cardBase, {alignItems: 'center'}]}>
+                  <Text style={[styles.headerText, {fontSize: 24}]}>{guessTitleText}{lutungName ? `\n(${lutungName})` : ''}</Text>
+                  <Text style={[styles.labelText, {textAlign: 'center', marginBottom: 20, color: '#7F8C8D'}]}>{isGuessingBanteng ? "Ketik tebakanmu untuk kata Banteng!" : txt.GUESS_DESC}</Text>
+                  
+                  <TextInput style={styles.textInputFull} placeholder={txt.GUESS_INPUT} value={mrWhiteGuess} onChangeText={setMrWhiteGuess} />
+                  
+                  <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#2ECC71', width: '100%', marginTop: 20}]} onPress={handleMrWhiteGuess}>
+                    <Text style={styles.btnPrimaryText}>{txt.GUESS_BTN}</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
-          </SafeAreaView>
-        </KeyboardAvoidingView>
-      )}
+            </SafeAreaView>
+          </KeyboardAvoidingView>
+        );
+      })()}
 
       {screen === 'SCOREBOARD' && (() => {
         let lbCols = players.length <= 5 ? 1 : players.length <= 10 ? 2 : players.length <= 15 ? 3 : 4;
@@ -1530,10 +1845,10 @@ export default function App() {
             <AnimatedBackgroundDecor />
 
             <View style={[StyleSheet.absoluteFillObject, {zIndex: 999}]} pointerEvents="none">
-              <ConfettiCannon count={200} origin={{x: screenWidth/2, y: -20}} fallSpeed={3000} colors={['#F1C40F', '#3498DB', '#E74C3C', '#2ECC71']} autoStart={true} />
+              <ConfettiCannon count={100} origin={{x: screenWidth/2, y: -20}} fallSpeed={3000} colors={['#F1C40F', '#3498DB', '#E74C3C', '#2ECC71']} autoStart={true} />
             </View>
 
-            <ScrollView contentContainerStyle={{padding: 20, paddingBottom: 60}}>
+            <ScrollView contentContainerStyle={{padding: 20, paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 20 : 20, paddingBottom: 60}}>
               <View style={[styles.cardBase, {backgroundColor: '#2ECC71', alignItems: 'center', padding: 15, marginBottom: 20}]}>
                 <Text style={[styles.headerText, {color: '#FFF', fontSize: 32, marginBottom: 0}]}>{winnerLog}</Text>
               </View>
@@ -1541,9 +1856,13 @@ export default function App() {
               <View style={{alignItems: 'center', marginBottom: 20, backgroundColor: '#FFF', padding: 15, ...styles.shadowTactile}}>
                 <Text style={styles.subTitleText}>{txt.SECRET_WORD} {txt.ROLE_CIVILIAN.toUpperCase()}:</Text>
                 <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word?.toUpperCase()}</Text>
-                {/* TAMBAHAN KATA BANTENG */}
-                <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
-                <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord?.toUpperCase()}</Text>
+                
+                {civilianWordObj.undercoverWord && (
+                   <>
+                     <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
+                     <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord.toUpperCase()}</Text>
+                   </>
+                )}
               </View>
 
               <View style={{borderTopWidth: 4, borderColor: '#2C3E50', paddingTop: 15}}>
@@ -1576,7 +1895,7 @@ export default function App() {
                 </TouchableOpacity>
               </View>
 
-              <TouchableOpacity style={[styles.btnPrimary, {marginTop: 20, backgroundColor: '#2ECC71'}]} onPress={() => { setRound(round + 1); startRound(); }}>
+              <TouchableOpacity style={[styles.btnPrimary, {marginTop: 20, backgroundColor: '#2ECC71'}]} onPress={() => { setRound(r => r + 1); startRound(); }}>
                 <Text style={styles.btnPrimaryText}>{txt.PLAY_AGAIN} {round + 1}</Text>
               </TouchableOpacity>
               <TouchableOpacity style={[styles.btnPrimary, {backgroundColor: '#ECF0F1', marginTop: 10}]} onPress={() => { playSFX('click'); changeScreen('HOME', true); }}>
@@ -1592,9 +1911,13 @@ export default function App() {
                 <View style={{alignItems: 'center', marginBottom: 20, backgroundColor: '#FFF', padding: 15, ...styles.shadowTactile}}>
                   <Text style={styles.subTitleText}>{txt.SECRET_WORD} {txt.ROLE_CIVILIAN.toUpperCase()}:</Text>
                   <Text style={[styles.hugeWord, {color: '#3498DB', textAlign: 'center'}]}>{civilianWordObj.word?.toUpperCase()}</Text>
-                  {/* TAMBAHAN KATA BANTENG */}
-                  <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
-                  <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord?.toUpperCase()}</Text>
+                  
+                  {civilianWordObj.undercoverWord && (
+                     <>
+                       <Text style={[styles.subTitleText, {marginTop: 5}]}>{txt.SECRET_WORD} {txt.ROLE_UNDERCOVER.toUpperCase()}:</Text>
+                       <Text style={[styles.hugeWord, {color: '#E74C3C', textAlign: 'center', fontSize: 24, marginVertical: 5}]}>{civilianWordObj.undercoverWord.toUpperCase()}</Text>
+                     </>
+                  )}
                 </View>
                 <View style={{borderTopWidth: 4, borderColor: '#2C3E50', paddingTop: 15}}>
                   <Text style={[styles.headerText, {fontSize: 26, textAlign: 'center', marginBottom: 15}]}>{txt.SCOREBOARD}</Text>
@@ -1642,7 +1965,7 @@ export default function App() {
           <SafeAreaView style={styles.container}>
             <AnimatedBackgroundDecor />
             
-            <ScrollView contentContainerStyle={{padding: 20, paddingBottom: 60}}>
+            <ScrollView contentContainerStyle={{padding: 20, paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 20 : 20, paddingBottom: 60}}>
               <View style={[styles.cardBase, {backgroundColor: '#F1C40F', padding: 20, alignItems: 'center', marginBottom: 20}]}>
                  <Text style={[styles.headerText, {color: '#2C3E50', marginBottom: 0}]}>{GAME_NAME}</Text>
                  <Text style={[styles.subTitleText, {color: '#E74C3C', marginTop: 5}]}>{txt.GAME_SUB}</Text>
@@ -1725,11 +2048,11 @@ const tactileShadow = {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#ECF0F1' }, 
+  container: { flex: 1, backgroundColor: '#ECF0F1', paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }, 
   contentCenter: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
   shadowTactile: tactileShadow,
   
-  topBar: { padding: 20, paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight + 10 : 20, flexDirection: 'row', alignItems: 'center' },
+  topBar: { padding: 20, paddingTop: 20, flexDirection: 'row', alignItems: 'center' },
   backBtn: { backgroundColor: '#F1C40F', paddingHorizontal: 15, paddingVertical: 8, ...tactileShadow },
   backBtnText: { fontSize: 16, fontWeight: '900', color: '#2C3E50' },
   headerText: { fontSize: 30, fontWeight: '900', color: '#2C3E50', textAlign: 'center', marginBottom: 20 },
@@ -1785,7 +2108,7 @@ const styles = StyleSheet.create({
   scoreRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 15, paddingHorizontal: 15, backgroundColor: '#FFF', marginBottom: 12, ...tactileShadow },
   scoreRank: { fontSize: 24, fontWeight: '900', color: '#2C3E50' },
   scoreName: { fontSize: 18, fontWeight: '900', color: '#2C3E50' },
-  scorePoint: { fontSize: 20, fontWeight: '900', color: '#E74C3C' },
+  scorePoint: { fontSize: 18, fontWeight: '900', color: '#E74C3C' },
   imgFull: { width: '100%', height: '100%', resizeMode: 'cover' },
 
   boothPhotoCard: { backgroundColor: '#FFF', ...tactileShadow },
